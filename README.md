@@ -7,7 +7,7 @@ python3 ship_log.py -fname ~/logs/logFile.log -host ip.com -port 5222
 
 Ship your log lines from a pipe via UDP packets to a server accepting log lines. From the directory of your docker-compose.yml file,
 ```
-docker-compose logs -f | python3 ship_log.py -host ip.com -port 5222  
+docker-compose logs -f | python3 pipe_log.py -host ip.com -port 5222  
 ```
 
 Note, after the above commands, you can add a ```&``` to run this in the background.
