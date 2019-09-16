@@ -20,7 +20,7 @@ def broadcast_client(host, port, postdata, node_name):
 def send_to_queue(broadcast_queue, lines):
     broadcast_queue.put(lines)
 
-def get_from_queue(broadcast_queue, host, port):
+def get_from_queue(broadcast_queue, host, port, node_name):
     while True:
         postdata = broadcast_queue.get(timeout=10000.0)
         if len(postdata):
