@@ -2,7 +2,12 @@ import argparse
 import socket
 import json
 
+
 MAX_BYTES = 65535
+
+def write_line(line):
+    with open('./logs/test.log', 'a') as f:
+        f.write(line+'\n')
 
 def log_server(host, port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -11,7 +16,7 @@ def log_server(host, port):
     while True:
         received_bytes, address = sock.recvfrom(MAX_BYTES)
         client_data = json.loads(received_bytes.decode())
-        print(client_data)
+        write_line(client_data)
 
 
 if __name__ == '__main__':
@@ -24,7 +29,7 @@ if __name__ == '__main__':
         help='The log server public IP where we listen on'
     )
     PARSER.add_argument('-port',
-        metavar='-port', type=str, default='5222',
+        metavar='-port', type=int, default=5222,
         help='The log server port where we listen on'
     )
 
