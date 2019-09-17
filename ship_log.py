@@ -10,22 +10,6 @@ if sys.version_info.major > 2:
 else:
     from Queue import Queue
 
-def broadcast_client(host, port, postdata, node_name):
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-    send_bytes = json.dumps(node_name+postdata).encode()
-    #print("Sending lines...")
-    sock.sendto(send_bytes, (host, port))
-
-def send_to_queue(broadcast_queue, lines):
-    broadcast_queue.put(lines)
-
-def get_from_queue(broadcast_queue, host, port, node_name):
-    while True:
-        postdata = broadcast_queue.get(timeout=10000.0)
-        if len(postdata):
-            broadcast_client(host, port, postdata, node_name)
-
 def trail_log(broadcast_queue, fname):
     with open(fname, 'r') as fname:
         fname.seek(0,2) # Go to the end of the file
@@ -34,8 +18,22 @@ def trail_log(broadcast_queue, fname):
             if not line:
                 time.sleep(0.1) # Sleep briefly
                 continue
-            lines = line.rstrip()
-            send_to_queue(broadcast_queue, lines)
+            line = line.rstrip()
+            broadcast_queue.put(line)
+
+def send_datagram(broadcast_queue, host, port, node_name):
+    while True:
+        postdata = broadcast_queue.get(timeout=10000.0)
+        if postdata:
+            _send_datagram(host, port, postdata, node_name)
+
+def _send_datagram(host, port, postdata, node_name):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+    sock.sendto(
+        json.dumps(node_name+postdata).encode(),
+        (host, port)
+    )
 
 if __name__ == '__main__':
 
