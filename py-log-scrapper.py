@@ -22,12 +22,11 @@ log_manager = results_manager.ResultsManager(IO_OPTIONS)
 logger = log_manager.logger
 
 node_names = [
-    "zmq", "coo", "node1", "node2", "node3", "hlxtest", "helix-esports",
-    "follower_1_1", "follower_2_1", "follower_3_1", "follower_4_1",
-    "coordinator_1_1", "relayer_1", "backend_1"
+    "zmq", "hlxtest", "wallet.hlxtest", "node1", "node2", "node3",
+    "nominee_1", "nominee_2", "nominee_3", "nominee_4", "nominee_5"
 ]
 
-node_id_pattern = re.compile(r"^[a-zA-Z0-9_]+")
+node_id_pattern = re.compile(r"^[a-zA-Z0-9._]+")
 
 node_metrics = {
     'zmq': {
@@ -62,7 +61,7 @@ node_metrics = {
         'startSpamming': Gauge('zmq_startSpamming', ''),
         'stopSpamming': Gauge('zmq_stopSpamming', '')
     },
-    'coo': {
+    'wallet.hlxtest': {
         'toProcess': Gauge('coo_toProcess', ''),
         'toBroadcast': Gauge('coo_toBroadcast', ''),
         'toRequest': Gauge('coo_toRequest', ''),
@@ -222,39 +221,7 @@ node_metrics = {
         'startSpamming': Gauge('hlxtest_startSpamming', ''),
         'stopSpamming': Gauge('hlxtest_stopSpamming', '')
     },
-    'helix': {
-        'toProcess': Gauge('esports_toProcess', ''),
-        'toBroadcast': Gauge('esports_toBroadcast', ''),
-        'toRequest': Gauge('esports_toRequest', ''),
-        'toReply': Gauge('esports_toReply', ''),
-        'totalTransactions': Gauge('esports_totalTransactions', ''),
-        'tailsTraversed': Gauge('esports_tailsTraversed', ''),
-        'solid': Gauge('esports_solid', ''),
-        'nonSolid': Gauge('esports_nonSolid', ''),
-        'dnsCheck': Gauge('esports_dnsCheck', ''),
-        'milestoneChange': Gauge('esports_milestoneChange', ''),
-        'solidMilestoneChange': Gauge('esports_solidMilestoneChange', ''),
-        'addNeighbors': Gauge('esports_addNeighbors', ''),
-        'getNodeInfo': Gauge('esports_getNodeInfo', ''),
-        'attachToTangle': Gauge('esports_attachToTangle', ''),
-        'broadcastTransactions': Gauge('esports_broadcastTransactions', ''),
-        'getBalances': Gauge('esports_getBalances', ''),
-        'getInclusionStates': Gauge('esports_getInclusionStates', ''),
-        'getNeighbors': Gauge('esports_getNeighbors', ''),
-        'getNodeAPIConfiguration': Gauge('esports_getNodeAPIConfiguration', ''),
-        'getTips': Gauge('esports_getTips', ''),
-        'getTransactionsToApprove': Gauge('esports_getTransactionsToApprove', ''),
-        'getTransactionStrings': Gauge('esports_getTransactionStrings', ''),
-        'interruptAttachingToTangle': Gauge('esports_interruptAttachingToTangle', ''),
-        'removeNeighbors': Gauge('esports_removeNeighbors', ''),
-        'storeTransactions': Gauge('esports_storeTransactions', ''),
-        'getMissingTransactions': Gauge('esports_getMissingTransactions', ''),
-        'checkConsistency': Gauge('esports_checkConsistency', ''),
-        'wereAddressesSpentFrom': Gauge('esports_wereAddressesSpentFrom', ''),
-        'startSpamming': Gauge('esports_startSpamming', ''),
-        'stopSpamming': Gauge('esports_stopSpamming', '')
-    },
-    'follower_1_1': {
+    'nominee_1': {
         'toProcess': Gauge('follower_1_toProcess', ''),
         'toBroadcast': Gauge('follower_1_toBroadcast', ''),
         'toRequest': Gauge('follower_1_toRequest', ''),
@@ -286,7 +253,7 @@ node_metrics = {
         'startSpamming': Gauge('follower_1_startSpamming', ''),
         'stopSpamming': Gauge('follower_1_stopSpamming', '')
     },
-    'follower_2_1': {
+    'nominee_2': {
         'toProcess': Gauge('follower_2_toProcess', ''),
         'toBroadcast': Gauge('follower_2_toBroadcast', ''),
         'toRequest': Gauge('follower_2_toRequest', ''),
@@ -318,7 +285,7 @@ node_metrics = {
         'startSpamming': Gauge('follower_2_startSpamming', ''),
         'stopSpamming': Gauge('follower_2_stopSpamming', '')
     },
-    'follower_3_1': {
+    'nominee_3': {
         'toProcess': Gauge('follower_3_toProcess', ''),
         'toBroadcast': Gauge('follower_3_toBroadcast', ''),
         'toRequest': Gauge('follower_3_toRequest', ''),
@@ -350,7 +317,7 @@ node_metrics = {
         'startSpamming': Gauge('follower_3_startSpamming', ''),
         'stopSpamming': Gauge('follower_3_stopSpamming', '')
     },
-    'follower_4_1': {
+    'nominee_4': {
         'toProcess': Gauge('follower_4_toProcess', ''),
         'toBroadcast': Gauge('follower_4_toBroadcast', ''),
         'toRequest': Gauge('follower_4_toRequest', ''),
@@ -382,7 +349,7 @@ node_metrics = {
         'startSpamming': Gauge('follower_4_startSpamming', ''),
         'stopSpamming': Gauge('follower_4_stopSpamming', '')
     },
-    'coordinator_1': {
+    'nominee_5': {
         'toProcess': Gauge('coordinator_1_toProcess', ''),
         'toBroadcast': Gauge('coordinator_1_toBroadcast', ''),
         'toRequest': Gauge('coordinator_1_toRequest', ''),
@@ -414,70 +381,6 @@ node_metrics = {
         'startSpamming': Gauge('coordinator_1_startSpamming', ''),
         'stopSpamming': Gauge('coordinator_1_stopSpamming', '')
     },
-    'relayer_1': {
-        'toProcess': Gauge('relayer_1_toProcess', ''),
-        'toBroadcast': Gauge('relayer_1_toBroadcast', ''),
-        'toRequest': Gauge('relayer_1_toRequest', ''),
-        'toReply': Gauge('relayer_1_toReply', ''),
-        'totalTransactions': Gauge('relayer_1_totalTransactions', ''),
-        'tailsTraversed': Gauge('relayer_1_tailsTraversed', ''),
-        'solid': Gauge('relayer_1_solid', ''),
-        'nonSolid': Gauge('relayer_1_nonSolid', ''),
-        'dnsCheck': Gauge('relayer_1_dnsCheck', ''),
-        'milestoneChange': Gauge('relayer_1_milestoneChange', ''),
-        'solidMilestoneChange': Gauge('relayer_1_solidMilestoneChange', ''),
-        'addNeighbors': Gauge('relayer_1_addNeighbors', ''),
-        'getNodeInfo': Gauge('relayer_1_getNodeInfo', ''),
-        'attachToTangle': Gauge('relayer_1_attachToTangle', ''),
-        'broadcastTransactions': Gauge('relayer_1_broadcastTransactions', ''),
-        'getBalances': Gauge('relayer_1_getBalances', ''),
-        'getInclusionStates': Gauge('relayer_1_getInclusionStates', ''),
-        'getNeighbors': Gauge('relayer_1_getNeighbors', ''),
-        'getNodeAPIConfiguration': Gauge('relayer_1_getNodeAPIConfiguration', ''),
-        'getTips': Gauge('relayer_1_getTips', ''),
-        'getTransactionsToApprove': Gauge('relayer_1_getTransactionsToApprove', ''),
-        'getTransactionStrings': Gauge('relayer_1_getTransactionStrings', ''),
-        'interruptAttachingToTangle': Gauge('relayer_1_interruptAttachingToTangle', ''),
-        'removeNeighbors': Gauge('relayer_1_removeNeighbors', ''),
-        'storeTransactions': Gauge('relayer_1_storeTransactions', ''),
-        'getMissingTransactions': Gauge('relayer_1_getMissingTransactions', ''),
-        'checkConsistency': Gauge('relayer_1_checkConsistency', ''),
-        'wereAddressesSpentFrom': Gauge('relayer_1_wereAddressesSpentFrom', ''),
-        'startSpamming': Gauge('relayer_1_startSpamming', ''),
-        'stopSpamming': Gauge('relayer_1_stopSpamming', '')
-    },
-    'backend_1': {
-        'toProcess': Gauge('backend_1_toProcess', ''),
-        'toBroadcast': Gauge('backend_1_toBroadcast', ''),
-        'toRequest': Gauge('backend_1_toRequest', ''),
-        'toReply': Gauge('backend_1_toReply', ''),
-        'totalTransactions': Gauge('backend_1_totalTransactions', ''),
-        'tailsTraversed': Gauge('backend_1_tailsTraversed', ''),
-        'solid': Gauge('backend_1_solid', ''),
-        'nonSolid': Gauge('backend_1_nonSolid', ''),
-        'dnsCheck': Gauge('backend_1_dnsCheck', ''),
-        'milestoneChange': Gauge('backend_1_milestoneChange', ''),
-        'solidMilestoneChange': Gauge('backend_1_solidMilestoneChange', ''),
-        'addNeighbors': Gauge('backend_1_addNeighbors', ''),
-        'getNodeInfo': Gauge('backend_1_getNodeInfo', ''),
-        'attachToTangle': Gauge('backend_1_attachToTangle', ''),
-        'broadcastTransactions': Gauge('backend_1_broadcastTransactions', ''),
-        'getBalances': Gauge('backend_1_getBalances', ''),
-        'getInclusionStates': Gauge('backend_1_getInclusionStates', ''),
-        'getNeighbors': Gauge('backend_1_getNeighbors', ''),
-        'getNodeAPIConfiguration': Gauge('backend_1_getNodeAPIConfiguration', ''),
-        'getTips': Gauge('backend_1_getTips', ''),
-        'getTransactionsToApprove': Gauge('backend_1_getTransactionsToApprove', ''),
-        'getTransactionStrings': Gauge('backend_1_getTransactionStrings', ''),
-        'interruptAttachingToTangle': Gauge('backend_1_interruptAttachingToTangle', ''),
-        'removeNeighbors': Gauge('backend_1_removeNeighbors', ''),
-        'storeTransactions': Gauge('backend_1_storeTransactions', ''),
-        'getMissingTransactions': Gauge('backend_1_getMissingTransactions', ''),
-        'checkConsistency': Gauge('backend_1_checkConsistency', ''),
-        'wereAddressesSpentFrom': Gauge('backend_1_wereAddressesSpentFrom', ''),
-        'startSpamming': Gauge('backend_1_startSpamming', ''),
-        'stopSpamming': Gauge('backend_1_stopSpamming', '')
-        }
 }
 
 def match_for_api_request(line):
