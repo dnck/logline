@@ -1,10 +1,19 @@
+import argparse
 import results_manager
 import time
+import threading
+import sys
 import re
 from prometheus_client import start_http_server, Gauge
 
+if sys.version_info.major > 2:
+    from queue import Queue
+else:
+    from Queue import Queue
+
 IO_OPTIONS = {
-    'stdout_only': True, 'level': 'info', 'parentdir': '/home/hlx-dev/helix/simple-log-aggregation',
+    'stdout_only': True, 'level': 'info',
+    'parentdir': '/home/hlx-dev/helix/simple-log-aggregation',
     'log_filename': 'test.log'
 }
 
@@ -54,8 +63,7 @@ node_metrics = {
         'stopSpamming': Gauge('zmq_stopSpamming', '')
     },
     'coo': {
-        'toProcess': Gauge('coo_toProcess', ''),import re
-from prometheus_client import start_http_server, Gauge
+        'toProcess': Gauge('coo_toProcess', ''),
         'toBroadcast': Gauge('coo_toBroadcast', ''),
         'toRequest': Gauge('coo_toRequest', ''),
         'toReply': Gauge('coo_toReply', ''),
@@ -561,63 +569,64 @@ def inc_api_metric(node_id, api_request):
 def set_class_metric(node_id, metric, val):
     node_metrics[node_id][metric].set(val)
 
-def export_metrics_from_line(line):
-    node = re.match(node_id_pattern, line)
-    #print('split: ', line.split(" |")[0])
-    if node:
-        node_id = node.group(0)
-        #print('\n matched: ', node_id, '\n')
-        api_request = match_for_api_request(line)
-        if api_request:
-            inc_api_metric(node_id, api_request)
-            logger.info("Incremented {} for {}".format(api_request, node_id))
-            return
-        data = match_class_outside_api(line)
-        if data:
-            if data.get("rstats"):
-                set_class_metric(
-                    node_id, 'toProcess', data['rstats'][0]
-                )
-                set_class_metric(
-                    node_id, 'toBroadcast', data['rstats'][1]
-                )
-                set_class_metric(
-                    node_id, 'toRequest', data['rstats'][2]
-                )
-                set_class_metric(
-                    node_id, 'toReply', data['rstats'][3]
-                )
-                set_class_metric(
-                    node_id, 'totalTransactions', data['rstats'][4]
-                )
-                logger.info("New rstats for node {}: {}".format(
-                    node_id, data['rstats'])
-                )
-                return
-            if data.get("solid/nonSolid"):
-                set_class_metric(
-                    node_id, 'solid', data['solid/nonSolid'][0]
-                )
-                set_class_metric(
-                    node_id, 'nonSolid', data['solid/nonSolid'][1]
-                )
-                logger.info(
-                    "New solid/nonsolid report for {}: {}".format(
-                        node_id, data['solid/nonSolid']
-                    )
-                )
-                return
-            else:
-                data = data.popitem()
-                set_class_metric(
-                    node_id, data[0], data[1]
-                )
-                logger.info("New metric report {} for {}".format(
-                    node_id, data
-                    )
-                )
+def export_metrics(exporter_queue):
+    while True:
+        line = exporter_queue.get(timeout=10000.0)
+        if line:
+            node = re.match(node_id_pattern, line)
+            if node:
+                node_id = node.group(0)
+                api_request = match_for_api_request(line)
+                if api_request:
+                    inc_api_metric(node_id, api_request)
+                    logger.info("Incremented {} for {}".format(api_request, node_id))
+                    continue
+                data = match_class_outside_api(line)
+                if data:
+                    if data.get("rstats"):
+                        set_class_metric(
+                            node_id, 'toProcess', data['rstats'][0]
+                        )
+                        set_class_metric(
+                            node_id, 'toBroadcast', data['rstats'][1]
+                        )
+                        set_class_metric(
+                            node_id, 'toRequest', data['rstats'][2]
+                        )
+                        set_class_metric(
+                            node_id, 'toReply', data['rstats'][3]
+                        )
+                        set_class_metric(
+                            node_id, 'totalTransactions', data['rstats'][4]
+                        )
+                        logger.info("New rstats for node {}: {}".format(
+                            node_id, data['rstats'])
+                        )
+                        continue
+                    if data.get("solid/nonSolid"):
+                        set_class_metric(
+                            node_id, 'solid', data['solid/nonSolid'][0]
+                        )
+                        set_class_metric(
+                            node_id, 'nonSolid', data['solid/nonSolid'][1]
+                        )
+                        logger.info(
+                            "New solid/nonsolid report for {}: {}".format(
+                                node_id, data['solid/nonSolid']
+                            )
+                        )
+                        continue
+                    else:
+                        data = data.popitem()
+                        set_class_metric(
+                            node_id, data[0], data[1]
+                        )
+                        logger.info("New metric report {} for {}".format(
+                            node_id, data
+                            )
+                        )
 
-def trail_log(export_queue, fname):
+def trail_log(exporter_queue, fname):
     with open(fname, 'r') as fname:
         fname.seek(0,2) # Go to the end of the file
         while True:
@@ -625,15 +634,9 @@ def trail_log(export_queue, fname):
             if not line:
                 time.sleep(0.1) # Sleep briefly
                 continue
-            lines = line.rstrip()
-            send_to_queue(broadcast_queue, lines)
-
-def test_server():
-    with open('/home/hlx-dev/Desktop/helixnetwork.log', 'r') as f:
-        for line in f:
-            #print(line.rstrip())
-            export_metrics_from_line(line.strip())
-            time.sleep(0.01)
+            line = line.strip()
+            #print(line)
+            exporter_queue.put(line)
 
 if __name__ == '__main__':
     PARSER = argparse.ArgumentParser(
@@ -643,8 +646,22 @@ if __name__ == '__main__':
         metavar='fname', type=str, default='',
         help='Log file to scrap'
     )
+
     ARGS = PARSER.parse_args()
+
+    exporter_queue = Queue()
 
     start_http_server(9111)
 
-    test_server(ARGS.fname)
+
+    send_to_queue_thread = threading.Thread(
+        target=trail_log, args = (exporter_queue, ARGS.fname,)
+    )
+
+    export_metrics_thread = threading.Thread(
+        target=export_metrics,
+        args = (exporter_queue,)
+    )
+
+    send_to_queue_thread.start()
+    export_metrics_thread.start()

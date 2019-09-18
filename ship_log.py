@@ -69,7 +69,7 @@ if __name__ == '__main__':
     )
 
     broadcast_to_receiver_thread = threading.Thread(
-        target=get_from_queue,
+        target=send_datagram,
         args = (broadcast_queue, args.host, args.port, args.node_name)
     )
 
