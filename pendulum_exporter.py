@@ -27,7 +27,7 @@ known_node_names = [
 ]
 
 """
-NO! Can't use this logic due to docker 
+NO! Can't use this logic due to docker
 The node_id_pattern matches the first segment of the logline. It is assumed
 that the loglines are shipped with a unique hexdecimal string of len 8
 This is cared for by the ship_log.py or pipe_log.py programs.
@@ -190,12 +190,12 @@ def export_metrics(exporter_queue):
             node = re.match(node_id_pattern, line)
             if node:
                 node_id = node.group(0)
-                api_request = match_for_api_request(line)
+                api_request = match_for_api_request(api_request_metrics, line)
                 if api_request:
                     inc_api_metric(node_id, api_request)
                     logger.info("Incremented {} for {}".format(api_request, node_id))
                     continue
-                data = match_class_outside_api(api_request_metrics, line)
+                data = match_class_outside_api(line)
                 if data:
                     if data.get("rstats"):
                         set_rstat_metrics(node_id, data)
