@@ -199,6 +199,7 @@ def export_metrics(exporter_queue):
                         api_request_metrics,
                         x_class_metrics
                     )
+                )
             if node:
                 node_id = node.group(0)
                 api_request = match_for_api_request(api_request_metrics, line)
