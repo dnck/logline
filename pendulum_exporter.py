@@ -186,22 +186,25 @@ def set_class_metric(node_id, metric, val):
 KNOWN_NODES = []
 node_metrics = {}
 
+def update_node_metrics(node_id):
+    if node_id not in KNOWN_NODES and len(KNOWN_NODES) < 10:
+        KNOWN_NODES.append(node_id)
+        node_metrics.update(
+            construct_metrics(
+                node_id,
+                api_request_metrics,
+                x_class_metrics
+            )
+        )
+
 def export_metrics(exporter_queue):
     while True:
         line = exporter_queue.get(timeout=10000.0)
         if line:
             node = re.match(node_id_pattern, line)
-            if node not in KNOWN_NODES and len(KNOWN_NODES) < 10:
-                KNOWN_NODES.append(node)
-                node_metrics.update(
-                    construct_metrics(
-                        node,
-                        api_request_metrics,
-                        x_class_metrics
-                    )
-                )
             if node:
                 node_id = node.group(0)
+                update_node_metrics(node_id)
                 api_request = match_for_api_request(api_request_metrics, line)
                 if api_request:
                     inc_api_metric(node_id, api_request)
