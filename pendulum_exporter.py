@@ -87,7 +87,7 @@ def construct_metrics(node_name, api_request_metrics, x_class_metrics):
                 for metric in api_request_metrics
         }
     }
-    for metric in x_class_metrics
+    for metric in x_class_metrics:
         metrics[node_name].update(
             {metric[3:]: Gauge(metric.format(node_name), 'class metrics')}
         )
@@ -195,7 +195,7 @@ def export_metrics(exporter_queue):
                     inc_api_metric(node_id, api_request)
                     logger.info("Incremented {} for {}".format(api_request, node_id))
                     continue
-                data = match_class_outside_api(line)
+                data = match_class_outside_api(api_request_metrics, line)
                 if data:
                     if data.get("rstats"):
                         set_rstat_metrics(node_id, data)

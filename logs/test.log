@@ -1,0 +1,765 @@
+relayer_1  | 09/25 12:47:47.935 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0046ec9a6434d418d6e8e01982a6a98ce9802aa3ccdf365fdb5b91f7ea0afe12 is VALID
+backend_1  | 09/25 12:47:50.422 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:47:53.440 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43562
+relayer_1  | 09/25 12:47:54.714 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 42976
+relayer_1  | 09/25 12:48:39.376 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+relayer_1  | 09/25 12:48:40.680 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45982, snapshot hash: 00a2105ebebe7ccacb2c0f39ce7eee443eeaae6d421b3c895d7724e12f9866bd to ledger
+relayer_1  | 09/25 12:48:40.680 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45982 is SOLID
+backend_1  | 09/25 12:48:41.478 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45982, snapshot hash: 00a2105ebebe7ccacb2c0f39ce7eee443eeaae6d421b3c895d7724e12f9866bd to ledger
+backend_1  | 09/25 12:48:41.479 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45982 is SOLID
+backend_1  | 09/25 12:48:42.955 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:48:43.446 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43574
+backend_1  | 09/25 12:48:44.501 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:48:44.880 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00cc6386d807ceb64a56817213d85070dca38d90242a89514c4b3a61b96e11ca (1/6) added to round #45983
+relayer_1  | 09/25 12:48:44.878 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00cc6386d807ceb64a56817213d85070dca38d90242a89514c4b3a61b96e11ca, round: 45983
+backend_1  | 09/25 12:48:45.491 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00cc6386d807ceb64a56817213d85070dca38d90242a89514c4b3a61b96e11ca, round: 45983
+backend_1  | 09/25 12:48:45.494 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00cc6386d807ceb64a56817213d85070dca38d90242a89514c4b3a61b96e11ca (1/6) added to round #45983
+relayer_1  | 09/25 12:48:47.878 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00cc6386d807ceb64a56817213d85070dca38d90242a89514c4b3a61b96e11ca is VALID
+backend_1  | 09/25 12:48:48.492 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00cc6386d807ceb64a56817213d85070dca38d90242a89514c4b3a61b96e11ca is VALID
+relayer_1  | 09/25 12:48:49.721 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 42992
+relayer_1  | 09/25 12:48:49.880 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:48:53.448 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43578
+backend_1  | 09/25 12:48:53.478 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:48:55.684 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45983 is SOLID
+relayer_1  | 09/25 12:48:55.684 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45983, snapshot hash: 00cc6386d807ceb64a56817213d85070dca38d90242a89514c4b3a61b96e11ca to ledger
+backend_1  | 09/25 12:48:56.482 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45983, snapshot hash: 00cc6386d807ceb64a56817213d85070dca38d90242a89514c4b3a61b96e11ca to ledger
+backend_1  | 09/25 12:48:56.483 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45983 is SOLID
+backend_1  | 09/25 12:48:59.531 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:48:59.704 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00bc391ceacc856b4b5e741f7254b39484902c7f13abef25e05f78adfc5877e6, round: 45984
+backend_1  | 09/25 12:48:59.706 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00bc391ceacc856b4b5e741f7254b39484902c7f13abef25e05f78adfc5877e6 (1/6) added to round #45984
+relayer_1  | 09/25 12:48:59.722 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 42996
+relayer_1  | 09/25 12:49:00.112 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00bc391ceacc856b4b5e741f7254b39484902c7f13abef25e05f78adfc5877e6, round: 45984
+relayer_1  | 09/25 12:49:00.115 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00bc391ceacc856b4b5e741f7254b39484902c7f13abef25e05f78adfc5877e6 (1/6) added to round #45984
+relayer_1  | 09/25 12:49:00.388 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/1
+backend_1  | 09/25 12:49:02.705 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00bc391ceacc856b4b5e741f7254b39484902c7f13abef25e05f78adfc5877e6 is VALID
+relayer_1  | 09/25 12:49:03.112 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00bc391ceacc856b4b5e741f7254b39484902c7f13abef25e05f78adfc5877e6 is VALID
+backend_1  | 09/25 12:49:03.449 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43582
+backend_1  | 09/25 12:49:03.982 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:49:09.723 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 42996
+relayer_1  | 09/25 12:49:10.689 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45984, snapshot hash: 00bc391ceacc856b4b5e741f7254b39484902c7f13abef25e05f78adfc5877e6 to ledger
+relayer_1  | 09/25 12:49:10.689 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45984 is SOLID
+relayer_1  | 09/25 12:49:10.890 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:49:11.488 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45984, snapshot hash: 00bc391ceacc856b4b5e741f7254b39484902c7f13abef25e05f78adfc5877e6 to ledger
+backend_1  | 09/25 12:49:11.488 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45984 is SOLID
+backend_1  | 09/25 12:49:13.450 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43582
+backend_1  | 09/25 12:49:14.484 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:49:14.561 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:49:14.939 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0068e982654b42a50da2c0461de0d794d29eade03283e3e3980e5d64f5252dac, round: 45985
+backend_1  | 09/25 12:49:14.942 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0068e982654b42a50da2c0461de0d794d29eade03283e3e3980e5d64f5252dac (1/6) added to round #45985
+relayer_1  | 09/25 12:49:15.326 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0068e982654b42a50da2c0461de0d794d29eade03283e3e3980e5d64f5252dac, round: 45985
+relayer_1  | 09/25 12:49:15.328 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0068e982654b42a50da2c0461de0d794d29eade03283e3e3980e5d64f5252dac (1/6) added to round #45985
+backend_1  | 09/25 12:49:17.940 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0068e982654b42a50da2c0461de0d794d29eade03283e3e3980e5d64f5252dac is VALID
+relayer_1  | 09/25 12:49:18.327 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0068e982654b42a50da2c0461de0d794d29eade03283e3e3980e5d64f5252dac is VALID
+relayer_1  | 09/25 12:49:19.724 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43000
+relayer_1  | 09/25 12:49:21.396 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:49:23.451 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43586
+backend_1  | 09/25 12:49:24.986 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:49:25.694 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45985, snapshot hash: 0068e982654b42a50da2c0461de0d794d29eade03283e3e3980e5d64f5252dac to ledger
+relayer_1  | 09/25 12:49:25.695 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45985 is SOLID
+backend_1  | 09/25 12:49:26.493 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45985, snapshot hash: 0068e982654b42a50da2c0461de0d794d29eade03283e3e3980e5d64f5252dac to ledger
+backend_1  | 09/25 12:49:26.494 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45985 is SOLID
+backend_1  | 09/25 12:49:29.587 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:49:29.726 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43004
+backend_1  | 09/25 12:49:30.163 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 007577ce5d29e962cda8de9ee024a1a6742d33dabc7ef9b6b8c570bef8f36433, round: 45986
+backend_1  | 09/25 12:49:30.167 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 007577ce5d29e962cda8de9ee024a1a6742d33dabc7ef9b6b8c570bef8f36433 (1/6) added to round #45986
+relayer_1  | 09/25 12:49:30.565 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 007577ce5d29e962cda8de9ee024a1a6742d33dabc7ef9b6b8c570bef8f36433, round: 45986
+relayer_1  | 09/25 12:49:30.567 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 007577ce5d29e962cda8de9ee024a1a6742d33dabc7ef9b6b8c570bef8f36433 (1/6) added to round #45986
+relayer_1  | 09/25 12:49:31.902 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:49:33.164 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 007577ce5d29e962cda8de9ee024a1a6742d33dabc7ef9b6b8c570bef8f36433 is VALID
+backend_1  | 09/25 12:49:33.452 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43590
+relayer_1  | 09/25 12:49:33.566 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 007577ce5d29e962cda8de9ee024a1a6742d33dabc7ef9b6b8c570bef8f36433 is VALID
+backend_1  | 09/25 12:49:35.488 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:49:39.727 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43004
+relayer_1  | 09/25 12:49:40.700 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45986, snapshot hash: 007577ce5d29e962cda8de9ee024a1a6742d33dabc7ef9b6b8c570bef8f36433 to ledger
+relayer_1  | 09/25 12:49:40.700 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45986 is SOLID
+backend_1  | 09/25 12:49:41.498 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45986, snapshot hash: 007577ce5d29e962cda8de9ee024a1a6742d33dabc7ef9b6b8c570bef8f36433 to ledger
+backend_1  | 09/25 12:49:41.498 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45986 is SOLID
+relayer_1  | 09/25 12:49:42.405 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:49:43.454 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43590
+backend_1  | 09/25 12:49:44.616 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:49:44.786 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0082d221febcca56d41ccc03031e3225434226dc0ae18921e07957ab27c69b3e, round: 45987
+relayer_1  | 09/25 12:49:44.790 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0082d221febcca56d41ccc03031e3225434226dc0ae18921e07957ab27c69b3e (1/6) added to round #45987
+backend_1  | 09/25 12:49:45.399 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0082d221febcca56d41ccc03031e3225434226dc0ae18921e07957ab27c69b3e, round: 45987
+backend_1  | 09/25 12:49:45.404 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0082d221febcca56d41ccc03031e3225434226dc0ae18921e07957ab27c69b3e (1/6) added to round #45987
+backend_1  | 09/25 12:49:46.011 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:49:47.787 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0082d221febcca56d41ccc03031e3225434226dc0ae18921e07957ab27c69b3e is VALID
+backend_1  | 09/25 12:49:48.399 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0082d221febcca56d41ccc03031e3225434226dc0ae18921e07957ab27c69b3e is VALID
+relayer_1  | 09/25 12:49:49.728 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43008
+relayer_1  | 09/25 12:49:52.909 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:49:53.456 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43594
+relayer_1  | 09/25 12:49:55.705 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45987, snapshot hash: 0082d221febcca56d41ccc03031e3225434226dc0ae18921e07957ab27c69b3e to ledger
+relayer_1  | 09/25 12:49:55.706 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45987 is SOLID
+backend_1  | 09/25 12:49:56.503 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45987 is SOLID
+backend_1  | 09/25 12:49:56.513 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:49:56.502 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45987, snapshot hash: 0082d221febcca56d41ccc03031e3225434226dc0ae18921e07957ab27c69b3e to ledger
+backend_1  | 09/25 12:49:59.643 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:49:59.730 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43012
+relayer_1  | 09/25 12:50:00.006 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0040883185332030a6f0c2ca1819cd612c01db01f0d4ee50a0223e6d15c2baad, round: 45988
+relayer_1  | 09/25 12:50:00.008 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0040883185332030a6f0c2ca1819cd612c01db01f0d4ee50a0223e6d15c2baad (1/6) added to round #45988
+backend_1  | 09/25 12:50:00.634 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0040883185332030a6f0c2ca1819cd612c01db01f0d4ee50a0223e6d15c2baad, round: 45988
+backend_1  | 09/25 12:50:00.637 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0040883185332030a6f0c2ca1819cd612c01db01f0d4ee50a0223e6d15c2baad (1/6) added to round #45988
+relayer_1  | 09/25 12:50:03.007 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0040883185332030a6f0c2ca1819cd612c01db01f0d4ee50a0223e6d15c2baad is VALID
+relayer_1  | 09/25 12:50:03.411 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:50:03.457 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43598
+backend_1  | 09/25 12:50:03.635 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0040883185332030a6f0c2ca1819cd612c01db01f0d4ee50a0223e6d15c2baad is VALID
+backend_1  | 09/25 12:50:07.037 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:50:09.731 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43012
+relayer_1  | 09/25 12:50:10.711 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45988, snapshot hash: 0040883185332030a6f0c2ca1819cd612c01db01f0d4ee50a0223e6d15c2baad to ledger
+relayer_1  | 09/25 12:50:10.711 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45988 is SOLID
+backend_1  | 09/25 12:50:11.507 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45988, snapshot hash: 0040883185332030a6f0c2ca1819cd612c01db01f0d4ee50a0223e6d15c2baad to ledger
+backend_1  | 09/25 12:50:11.508 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45988 is SOLID
+backend_1  | 09/25 12:50:13.458 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43598
+relayer_1  | 09/25 12:50:13.914 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:50:14.674 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:50:14.848 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00d35b7173bca9ba8b0cf27803f52f7c6c9655cfe3039ffb316be0882f37cb55, round: 45989
+backend_1  | 09/25 12:50:14.851 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00d35b7173bca9ba8b0cf27803f52f7c6c9655cfe3039ffb316be0882f37cb55 (1/6) added to round #45989
+relayer_1  | 09/25 12:50:15.265 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00d35b7173bca9ba8b0cf27803f52f7c6c9655cfe3039ffb316be0882f37cb55, round: 45989
+relayer_1  | 09/25 12:50:15.268 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00d35b7173bca9ba8b0cf27803f52f7c6c9655cfe3039ffb316be0882f37cb55 (1/6) added to round #45989
+backend_1  | 09/25 12:50:17.539 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:50:17.849 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00d35b7173bca9ba8b0cf27803f52f7c6c9655cfe3039ffb316be0882f37cb55 is VALID
+relayer_1  | 09/25 12:50:18.265 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00d35b7173bca9ba8b0cf27803f52f7c6c9655cfe3039ffb316be0882f37cb55 is VALID
+relayer_1  | 09/25 12:50:19.732 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43016
+backend_1  | 09/25 12:50:23.460 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43602
+relayer_1  | 09/25 12:50:24.416 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+relayer_1  | 09/25 12:50:25.717 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45989 is SOLID
+relayer_1  | 09/25 12:50:25.715 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45989, snapshot hash: 00d35b7173bca9ba8b0cf27803f52f7c6c9655cfe3039ffb316be0882f37cb55 to ledger
+backend_1  | 09/25 12:50:26.511 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45989, snapshot hash: 00d35b7173bca9ba8b0cf27803f52f7c6c9655cfe3039ffb316be0882f37cb55 to ledger
+backend_1  | 09/25 12:50:26.512 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45989 is SOLID
+backend_1  | 09/25 12:50:28.041 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:50:29.708 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:50:29.734 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43016
+backend_1  | 09/25 12:50:30.091 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00804d44dfa519fc783da59b70a8f5019ccb3ae87fc2107413e4232910f18d7a, round: 45990
+backend_1  | 09/25 12:50:30.094 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00804d44dfa519fc783da59b70a8f5019ccb3ae87fc2107413e4232910f18d7a (1/6) added to round #45990
+relayer_1  | 09/25 12:50:30.485 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00804d44dfa519fc783da59b70a8f5019ccb3ae87fc2107413e4232910f18d7a, round: 45990
+relayer_1  | 09/25 12:50:30.489 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00804d44dfa519fc783da59b70a8f5019ccb3ae87fc2107413e4232910f18d7a (1/6) added to round #45990
+backend_1  | 09/25 12:50:33.092 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00804d44dfa519fc783da59b70a8f5019ccb3ae87fc2107413e4232910f18d7a is VALID
+backend_1  | 09/25 12:50:33.461 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43606
+relayer_1  | 09/25 12:50:33.485 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00804d44dfa519fc783da59b70a8f5019ccb3ae87fc2107413e4232910f18d7a is VALID
+relayer_1  | 09/25 12:50:34.919 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:50:38.543 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:50:39.735 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43020
+relayer_1  | 09/25 12:50:40.720 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45990, snapshot hash: 00804d44dfa519fc783da59b70a8f5019ccb3ae87fc2107413e4232910f18d7a to ledger
+relayer_1  | 09/25 12:50:40.721 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45990 is SOLID
+backend_1  | 09/25 12:50:41.520 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45990 is SOLID
+backend_1  | 09/25 12:50:41.517 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45990, snapshot hash: 00804d44dfa519fc783da59b70a8f5019ccb3ae87fc2107413e4232910f18d7a to ledger
+backend_1  | 09/25 12:50:43.462 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43606
+backend_1  | 09/25 12:50:44.757 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:50:45.315 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00f112131a7c468f7e0aa9bbbc35726bface04882bf98efbe39cbfaee7a0f08f, round: 45991
+backend_1  | 09/25 12:50:45.319 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00f112131a7c468f7e0aa9bbbc35726bface04882bf98efbe39cbfaee7a0f08f (1/6) added to round #45991
+relayer_1  | 09/25 12:50:45.426 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:50:45.735 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00f112131a7c468f7e0aa9bbbc35726bface04882bf98efbe39cbfaee7a0f08f, round: 45991
+relayer_1  | 09/25 12:50:45.739 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00f112131a7c468f7e0aa9bbbc35726bface04882bf98efbe39cbfaee7a0f08f (1/6) added to round #45991
+backend_1  | 09/25 12:50:48.316 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00f112131a7c468f7e0aa9bbbc35726bface04882bf98efbe39cbfaee7a0f08f is VALID
+relayer_1  | 09/25 12:50:48.736 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00f112131a7c468f7e0aa9bbbc35726bface04882bf98efbe39cbfaee7a0f08f is VALID
+backend_1  | 09/25 12:50:49.067 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:50:49.737 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43024
+backend_1  | 09/25 12:50:53.464 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43610
+relayer_1  | 09/25 12:50:55.725 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45991, snapshot hash: 00f112131a7c468f7e0aa9bbbc35726bface04882bf98efbe39cbfaee7a0f08f to ledger
+relayer_1  | 09/25 12:50:55.725 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45991 is SOLID
+relayer_1  | 09/25 12:50:55.929 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:50:56.524 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45991, snapshot hash: 00f112131a7c468f7e0aa9bbbc35726bface04882bf98efbe39cbfaee7a0f08f to ledger
+backend_1  | 09/25 12:50:56.525 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45991 is SOLID
+backend_1  | 09/25 12:50:59.569 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:50:59.738 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43024
+backend_1  | 09/25 12:50:59.798 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:50:59.968 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 004617e043ce80d74c81ace6eace040e652e59d358194bb3b0fb209c54d1ad9f, round: 45992
+relayer_1  | 09/25 12:50:59.971 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 004617e043ce80d74c81ace6eace040e652e59d358194bb3b0fb209c54d1ad9f (1/6) added to round #45992
+backend_1  | 09/25 12:51:00.562 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 004617e043ce80d74c81ace6eace040e652e59d358194bb3b0fb209c54d1ad9f, round: 45992
+backend_1  | 09/25 12:51:00.564 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 004617e043ce80d74c81ace6eace040e652e59d358194bb3b0fb209c54d1ad9f (1/6) added to round #45992
+relayer_1  | 09/25 12:51:02.969 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 004617e043ce80d74c81ace6eace040e652e59d358194bb3b0fb209c54d1ad9f is VALID
+backend_1  | 09/25 12:51:03.467 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43614
+backend_1  | 09/25 12:51:03.562 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 004617e043ce80d74c81ace6eace040e652e59d358194bb3b0fb209c54d1ad9f is VALID
+relayer_1  | 09/25 12:51:06.431 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:51:09.739 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43028
+backend_1  | 09/25 12:51:10.081 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:51:10.730 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45992, snapshot hash: 004617e043ce80d74c81ace6eace040e652e59d358194bb3b0fb209c54d1ad9f to ledger
+relayer_1  | 09/25 12:51:10.730 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45992 is SOLID
+backend_1  | 09/25 12:51:11.531 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45992, snapshot hash: 004617e043ce80d74c81ace6eace040e652e59d358194bb3b0fb209c54d1ad9f to ledger
+backend_1  | 09/25 12:51:11.533 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45992 is SOLID
+backend_1  | 09/25 12:51:13.469 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43614
+backend_1  | 09/25 12:51:14.824 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:51:15.180 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0026efc7f674b44b4bb5fc2012bc626fe0142a3f297618d6bdbf44f46e43eb1f, round: 45993
+relayer_1  | 09/25 12:51:15.182 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0026efc7f674b44b4bb5fc2012bc626fe0142a3f297618d6bdbf44f46e43eb1f (1/6) added to round #45993
+backend_1  | 09/25 12:51:15.814 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0026efc7f674b44b4bb5fc2012bc626fe0142a3f297618d6bdbf44f46e43eb1f, round: 45993
+backend_1  | 09/25 12:51:15.817 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0026efc7f674b44b4bb5fc2012bc626fe0142a3f297618d6bdbf44f46e43eb1f (1/6) added to round #45993
+relayer_1  | 09/25 12:51:16.934 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:51:18.180 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0026efc7f674b44b4bb5fc2012bc626fe0142a3f297618d6bdbf44f46e43eb1f is VALID
+backend_1  | 09/25 12:51:18.815 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0026efc7f674b44b4bb5fc2012bc626fe0142a3f297618d6bdbf44f46e43eb1f is VALID
+relayer_1  | 09/25 12:51:19.741 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43032
+backend_1  | 09/25 12:51:20.602 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:51:23.471 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43618
+relayer_1  | 09/25 12:51:25.734 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45993, snapshot hash: 0026efc7f674b44b4bb5fc2012bc626fe0142a3f297618d6bdbf44f46e43eb1f to ledger
+relayer_1  | 09/25 12:51:25.734 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45993 is SOLID
+backend_1  | 09/25 12:51:26.537 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45993, snapshot hash: 0026efc7f674b44b4bb5fc2012bc626fe0142a3f297618d6bdbf44f46e43eb1f to ledger
+backend_1  | 09/25 12:51:26.537 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45993 is SOLID
+relayer_1  | 09/25 12:51:27.436 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:51:29.742 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43032
+backend_1  | 09/25 12:51:29.864 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:51:30.048 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 008bb9dd33545b94f5ce91398a019b687a361bfd55c9b6c273223a01188bc2de, round: 45994
+backend_1  | 09/25 12:51:30.050 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 008bb9dd33545b94f5ce91398a019b687a361bfd55c9b6c273223a01188bc2de (1/6) added to round #45994
+relayer_1  | 09/25 12:51:30.415 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 008bb9dd33545b94f5ce91398a019b687a361bfd55c9b6c273223a01188bc2de, round: 45994
+relayer_1  | 09/25 12:51:30.418 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 008bb9dd33545b94f5ce91398a019b687a361bfd55c9b6c273223a01188bc2de (1/6) added to round #45994
+backend_1  | 09/25 12:51:31.106 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:51:33.048 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 008bb9dd33545b94f5ce91398a019b687a361bfd55c9b6c273223a01188bc2de is VALID
+relayer_1  | 09/25 12:51:33.415 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 008bb9dd33545b94f5ce91398a019b687a361bfd55c9b6c273223a01188bc2de is VALID
+backend_1  | 09/25 12:51:33.473 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43622
+relayer_1  | 09/25 12:51:37.942 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:51:39.743 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43036
+relayer_1  | 09/25 12:51:40.739 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45994, snapshot hash: 008bb9dd33545b94f5ce91398a019b687a361bfd55c9b6c273223a01188bc2de to ledger
+relayer_1  | 09/25 12:51:40.741 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45994 is SOLID
+backend_1  | 09/25 12:51:41.542 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45994, snapshot hash: 008bb9dd33545b94f5ce91398a019b687a361bfd55c9b6c273223a01188bc2de to ledger
+backend_1  | 09/25 12:51:41.544 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45994 is SOLID
+backend_1  | 09/25 12:51:41.608 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:51:43.475 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43622
+backend_1  | 09/25 12:51:44.891 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:51:45.290 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00e13fdc1a3ebf017cf21ef524ce4fc023d2f4d4e65c55eb778afe3b34f4a3ee, round: 45995
+backend_1  | 09/25 12:51:45.293 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00e13fdc1a3ebf017cf21ef524ce4fc023d2f4d4e65c55eb778afe3b34f4a3ee (1/6) added to round #45995
+relayer_1  | 09/25 12:51:45.632 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00e13fdc1a3ebf017cf21ef524ce4fc023d2f4d4e65c55eb778afe3b34f4a3ee, round: 45995
+relayer_1  | 09/25 12:51:45.635 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00e13fdc1a3ebf017cf21ef524ce4fc023d2f4d4e65c55eb778afe3b34f4a3ee (1/6) added to round #45995
+backend_1  | 09/25 12:51:48.290 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00e13fdc1a3ebf017cf21ef524ce4fc023d2f4d4e65c55eb778afe3b34f4a3ee is VALID
+relayer_1  | 09/25 12:51:48.444 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+relayer_1  | 09/25 12:51:48.632 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00e13fdc1a3ebf017cf21ef524ce4fc023d2f4d4e65c55eb778afe3b34f4a3ee is VALID
+relayer_1  | 09/25 12:51:49.744 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43040
+backend_1  | 09/25 12:51:52.110 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:51:53.476 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43626
+backend_1  | 09/25 12:51:55.622 [pool-15-thread-3] INFO  Node:189 - Checking Neighbors' Ip...
+backend_1  | 09/25 12:51:55.624 [pool-15-thread-3] INFO  Node:195 - DNS Checker: Validating DNS Address 'relayer' with '172.31.0.4'
+backend_1  | 09/25 12:51:55.624 [pool-15-thread-3] INFO  Node:203 - relayer seems fine.
+relayer_1  | 09/25 12:51:55.745 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45995, snapshot hash: 00e13fdc1a3ebf017cf21ef524ce4fc023d2f4d4e65c55eb778afe3b34f4a3ee to ledger
+relayer_1  | 09/25 12:51:55.746 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45995 is SOLID
+backend_1  | 09/25 12:51:56.548 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45995, snapshot hash: 00e13fdc1a3ebf017cf21ef524ce4fc023d2f4d4e65c55eb778afe3b34f4a3ee to ledger
+backend_1  | 09/25 12:51:56.548 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45995 is SOLID
+relayer_1  | 09/25 12:51:58.102 [pool-15-thread-3] INFO  Node:189 - Checking Neighbors' Ip...
+relayer_1  | 09/25 12:51:58.103 [pool-15-thread-3] INFO  Node:195 - DNS Checker: Validating DNS Address 'backend' with '172.31.0.3'
+relayer_1  | 09/25 12:51:58.104 [pool-15-thread-3] INFO  Node:203 - backend seems fine.
+relayer_1  | 09/25 12:51:58.946 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+relayer_1  | 09/25 12:51:59.745 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43040
+backend_1  | 09/25 12:51:59.930 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:52:00.538 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00fa9518f767c1c4646ef2dfcb70f9f09046aafa11380a524ee58bada5904086 (1/6) added to round #45996
+backend_1  | 09/25 12:52:00.536 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00fa9518f767c1c4646ef2dfcb70f9f09046aafa11380a524ee58bada5904086, round: 45996
+relayer_1  | 09/25 12:52:00.858 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00fa9518f767c1c4646ef2dfcb70f9f09046aafa11380a524ee58bada5904086, round: 45996
+relayer_1  | 09/25 12:52:00.862 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00fa9518f767c1c4646ef2dfcb70f9f09046aafa11380a524ee58bada5904086 (1/6) added to round #45996
+backend_1  | 09/25 12:52:02.628 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:52:03.478 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43630
+backend_1  | 09/25 12:52:03.537 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00fa9518f767c1c4646ef2dfcb70f9f09046aafa11380a524ee58bada5904086 is VALID
+relayer_1  | 09/25 12:52:03.858 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00fa9518f767c1c4646ef2dfcb70f9f09046aafa11380a524ee58bada5904086 is VALID
+relayer_1  | 09/25 12:52:09.455 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:52:09.746 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43044
+relayer_1  | 09/25 12:52:10.751 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45996, snapshot hash: 00fa9518f767c1c4646ef2dfcb70f9f09046aafa11380a524ee58bada5904086 to ledger
+relayer_1  | 09/25 12:52:10.751 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45996 is SOLID
+backend_1  | 09/25 12:52:11.552 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45996 is SOLID
+backend_1  | 09/25 12:52:11.552 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45996, snapshot hash: 00fa9518f767c1c4646ef2dfcb70f9f09046aafa11380a524ee58bada5904086 to ledger
+backend_1  | 09/25 12:52:13.130 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:52:13.479 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43630
+backend_1  | 09/25 12:52:14.958 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:52:15.097 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0028c5b10115c04f6bb725bdd2080e0fc79bf9da84f5c852f7be657b18b3a26d, round: 45997
+relayer_1  | 09/25 12:52:15.100 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0028c5b10115c04f6bb725bdd2080e0fc79bf9da84f5c852f7be657b18b3a26d (1/6) added to round #45997
+backend_1  | 09/25 12:52:15.780 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0028c5b10115c04f6bb725bdd2080e0fc79bf9da84f5c852f7be657b18b3a26d (1/6) added to round #45997
+backend_1  | 09/25 12:52:15.778 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0028c5b10115c04f6bb725bdd2080e0fc79bf9da84f5c852f7be657b18b3a26d, round: 45997
+relayer_1  | 09/25 12:52:18.097 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0028c5b10115c04f6bb725bdd2080e0fc79bf9da84f5c852f7be657b18b3a26d is VALID
+backend_1  | 09/25 12:52:18.779 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0028c5b10115c04f6bb725bdd2080e0fc79bf9da84f5c852f7be657b18b3a26d is VALID
+relayer_1  | 09/25 12:52:19.748 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43048
+relayer_1  | 09/25 12:52:19.957 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:52:23.483 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43634
+backend_1  | 09/25 12:52:23.655 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:52:25.757 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45997, snapshot hash: 0028c5b10115c04f6bb725bdd2080e0fc79bf9da84f5c852f7be657b18b3a26d to ledger
+relayer_1  | 09/25 12:52:25.760 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45997 is SOLID
+backend_1  | 09/25 12:52:26.556 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45997, snapshot hash: 0028c5b10115c04f6bb725bdd2080e0fc79bf9da84f5c852f7be657b18b3a26d to ledger
+backend_1  | 09/25 12:52:26.556 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45997 is SOLID
+relayer_1  | 09/25 12:52:29.749 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43048
+backend_1  | 09/25 12:52:29.997 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:52:30.337 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00984bb7f3582614493407a19c0d51b6d6e4b576c8259e4e25a3bb6297998dbf, round: 45998
+relayer_1  | 09/25 12:52:30.340 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00984bb7f3582614493407a19c0d51b6d6e4b576c8259e4e25a3bb6297998dbf (1/6) added to round #45998
+relayer_1  | 09/25 12:52:30.460 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/1
+backend_1  | 09/25 12:52:31.009 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00984bb7f3582614493407a19c0d51b6d6e4b576c8259e4e25a3bb6297998dbf (1/6) added to round #45998
+backend_1  | 09/25 12:52:31.006 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00984bb7f3582614493407a19c0d51b6d6e4b576c8259e4e25a3bb6297998dbf, round: 45998
+relayer_1  | 09/25 12:52:33.337 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00984bb7f3582614493407a19c0d51b6d6e4b576c8259e4e25a3bb6297998dbf is VALID
+backend_1  | 09/25 12:52:33.484 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43638
+backend_1  | 09/25 12:52:34.007 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00984bb7f3582614493407a19c0d51b6d6e4b576c8259e4e25a3bb6297998dbf is VALID
+backend_1  | 09/25 12:52:34.181 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:52:39.750 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43052
+relayer_1  | 09/25 12:52:40.764 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45998, snapshot hash: 00984bb7f3582614493407a19c0d51b6d6e4b576c8259e4e25a3bb6297998dbf to ledger
+relayer_1  | 09/25 12:52:40.765 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45998 is SOLID
+relayer_1  | 09/25 12:52:40.962 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:52:41.561 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45998, snapshot hash: 00984bb7f3582614493407a19c0d51b6d6e4b576c8259e4e25a3bb6297998dbf to ledger
+backend_1  | 09/25 12:52:41.561 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45998 is SOLID
+backend_1  | 09/25 12:52:43.485 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43638
+backend_1  | 09/25 12:52:44.683 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:52:45.024 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:52:45.225 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00a178858d1685dbee2b62c2e48d079a0593ef5b3b3e0df6ee908fa58e91f552, round: 45999
+backend_1  | 09/25 12:52:45.227 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00a178858d1685dbee2b62c2e48d079a0593ef5b3b3e0df6ee908fa58e91f552 (1/6) added to round #45999
+relayer_1  | 09/25 12:52:45.567 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00a178858d1685dbee2b62c2e48d079a0593ef5b3b3e0df6ee908fa58e91f552, round: 45999
+relayer_1  | 09/25 12:52:45.570 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00a178858d1685dbee2b62c2e48d079a0593ef5b3b3e0df6ee908fa58e91f552 (1/6) added to round #45999
+backend_1  | 09/25 12:52:48.225 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00a178858d1685dbee2b62c2e48d079a0593ef5b3b3e0df6ee908fa58e91f552 is VALID
+relayer_1  | 09/25 12:52:48.567 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00a178858d1685dbee2b62c2e48d079a0593ef5b3b3e0df6ee908fa58e91f552 is VALID
+relayer_1  | 09/25 12:52:49.752 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43056
+relayer_1  | 09/25 12:52:51.471 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:52:53.486 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43642
+backend_1  | 09/25 12:52:55.186 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:52:55.769 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45999, snapshot hash: 00a178858d1685dbee2b62c2e48d079a0593ef5b3b3e0df6ee908fa58e91f552 to ledger
+relayer_1  | 09/25 12:52:55.769 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45999 is SOLID
+backend_1  | 09/25 12:52:56.566 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #45999, snapshot hash: 00a178858d1685dbee2b62c2e48d079a0593ef5b3b3e0df6ee908fa58e91f552 to ledger
+backend_1  | 09/25 12:52:56.566 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #45999 is SOLID
+relayer_1  | 09/25 12:52:59.754 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43056
+backend_1  | 09/25 12:53:00.050 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:53:00.431 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00c799db0ff34bbd931e8575edc239640d601d2119214ab628f1cf6ef1805510, round: 46000
+backend_1  | 09/25 12:53:00.433 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00c799db0ff34bbd931e8575edc239640d601d2119214ab628f1cf6ef1805510 (1/6) added to round #46000
+relayer_1  | 09/25 12:53:00.798 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00c799db0ff34bbd931e8575edc239640d601d2119214ab628f1cf6ef1805510, round: 46000
+relayer_1  | 09/25 12:53:00.800 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00c799db0ff34bbd931e8575edc239640d601d2119214ab628f1cf6ef1805510 (1/6) added to round #46000
+relayer_1  | 09/25 12:53:01.978 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:53:03.433 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00c799db0ff34bbd931e8575edc239640d601d2119214ab628f1cf6ef1805510 is VALID
+backend_1  | 09/25 12:53:03.487 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43646
+relayer_1  | 09/25 12:53:03.798 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00c799db0ff34bbd931e8575edc239640d601d2119214ab628f1cf6ef1805510 is VALID
+backend_1  | 09/25 12:53:05.698 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:53:09.755 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43060
+relayer_1  | 09/25 12:53:10.773 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46000, snapshot hash: 00c799db0ff34bbd931e8575edc239640d601d2119214ab628f1cf6ef1805510 to ledger
+relayer_1  | 09/25 12:53:10.773 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46000 is SOLID
+backend_1  | 09/25 12:53:11.571 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46000, snapshot hash: 00c799db0ff34bbd931e8575edc239640d601d2119214ab628f1cf6ef1805510 to ledger
+backend_1  | 09/25 12:53:11.571 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46000 is SOLID
+relayer_1  | 09/25 12:53:12.480 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:53:13.488 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43646
+backend_1  | 09/25 12:53:15.070 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:53:15.673 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00920202c380f8d9fe78c640a5eef0b9f6366e1ee6375da1331f8240a4eca049, round: 46001
+backend_1  | 09/25 12:53:15.675 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00920202c380f8d9fe78c640a5eef0b9f6366e1ee6375da1331f8240a4eca049 (1/6) added to round #46001
+relayer_1  | 09/25 12:53:16.035 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00920202c380f8d9fe78c640a5eef0b9f6366e1ee6375da1331f8240a4eca049 (1/6) added to round #46001
+relayer_1  | 09/25 12:53:16.032 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00920202c380f8d9fe78c640a5eef0b9f6366e1ee6375da1331f8240a4eca049, round: 46001
+backend_1  | 09/25 12:53:16.224 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:53:18.674 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00920202c380f8d9fe78c640a5eef0b9f6366e1ee6375da1331f8240a4eca049 is VALID
+relayer_1  | 09/25 12:53:19.033 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00920202c380f8d9fe78c640a5eef0b9f6366e1ee6375da1331f8240a4eca049 is VALID
+relayer_1  | 09/25 12:53:19.756 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43064
+relayer_1  | 09/25 12:53:22.987 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:53:23.489 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43650
+relayer_1  | 09/25 12:53:25.778 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46001 is SOLID
+relayer_1  | 09/25 12:53:25.777 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46001, snapshot hash: 00920202c380f8d9fe78c640a5eef0b9f6366e1ee6375da1331f8240a4eca049 to ledger
+backend_1  | 09/25 12:53:26.576 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46001, snapshot hash: 00920202c380f8d9fe78c640a5eef0b9f6366e1ee6375da1331f8240a4eca049 to ledger
+backend_1  | 09/25 12:53:26.577 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46001 is SOLID
+backend_1  | 09/25 12:53:26.726 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:53:29.759 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43064
+backend_1  | 09/25 12:53:30.089 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:53:30.270 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00f68875d8bf5fd023cecf3a308aace149b2487f58f7eb29c7e8641e5c8514db, round: 46002
+relayer_1  | 09/25 12:53:30.273 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00f68875d8bf5fd023cecf3a308aace149b2487f58f7eb29c7e8641e5c8514db (1/6) added to round #46002
+backend_1  | 09/25 12:53:30.903 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00f68875d8bf5fd023cecf3a308aace149b2487f58f7eb29c7e8641e5c8514db, round: 46002
+backend_1  | 09/25 12:53:30.908 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00f68875d8bf5fd023cecf3a308aace149b2487f58f7eb29c7e8641e5c8514db (1/6) added to round #46002
+relayer_1  | 09/25 12:53:33.271 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00f68875d8bf5fd023cecf3a308aace149b2487f58f7eb29c7e8641e5c8514db is VALID
+backend_1  | 09/25 12:53:33.490 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43654
+relayer_1  | 09/25 12:53:33.490 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:53:33.904 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00f68875d8bf5fd023cecf3a308aace149b2487f58f7eb29c7e8641e5c8514db is VALID
+backend_1  | 09/25 12:53:37.252 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:53:39.760 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43068
+relayer_1  | 09/25 12:53:40.781 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46002, snapshot hash: 00f68875d8bf5fd023cecf3a308aace149b2487f58f7eb29c7e8641e5c8514db to ledger
+relayer_1  | 09/25 12:53:40.781 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46002 is SOLID
+backend_1  | 09/25 12:53:41.581 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46002, snapshot hash: 00f68875d8bf5fd023cecf3a308aace149b2487f58f7eb29c7e8641e5c8514db to ledger
+backend_1  | 09/25 12:53:41.581 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46002 is SOLID
+backend_1  | 09/25 12:53:43.491 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43654
+relayer_1  | 09/25 12:53:43.992 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:53:45.127 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:53:45.503 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00b2afbef79827f8f116e1dcbc827e654efae99a14ac1fb263d732ff49f614d4, round: 46003
+relayer_1  | 09/25 12:53:45.511 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00b2afbef79827f8f116e1dcbc827e654efae99a14ac1fb263d732ff49f614d4 (1/6) added to round #46003
+backend_1  | 09/25 12:53:46.147 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00b2afbef79827f8f116e1dcbc827e654efae99a14ac1fb263d732ff49f614d4, round: 46003
+backend_1  | 09/25 12:53:46.150 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00b2afbef79827f8f116e1dcbc827e654efae99a14ac1fb263d732ff49f614d4 (1/6) added to round #46003
+backend_1  | 09/25 12:53:47.769 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:53:48.504 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00b2afbef79827f8f116e1dcbc827e654efae99a14ac1fb263d732ff49f614d4 is VALID
+backend_1  | 09/25 12:53:49.148 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00b2afbef79827f8f116e1dcbc827e654efae99a14ac1fb263d732ff49f614d4 is VALID
+relayer_1  | 09/25 12:53:49.761 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43072
+backend_1  | 09/25 12:53:53.493 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43658
+relayer_1  | 09/25 12:53:54.496 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:53:55.785 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46003, snapshot hash: 00b2afbef79827f8f116e1dcbc827e654efae99a14ac1fb263d732ff49f614d4 to ledger
+relayer_1  | 09/25 12:53:55.785 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46003 is SOLID
+backend_1  | 09/25 12:53:56.585 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46003, snapshot hash: 00b2afbef79827f8f116e1dcbc827e654efae99a14ac1fb263d732ff49f614d4 to ledger
+backend_1  | 09/25 12:53:56.585 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46003 is SOLID
+backend_1  | 09/25 12:53:58.272 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:53:59.763 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43072
+backend_1  | 09/25 12:54:00.151 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:54:00.361 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0075005870dc76a54fa9b4bb9cbf9c5d24012b533ebdd16b94883e8987f9a14d, round: 46004
+backend_1  | 09/25 12:54:00.365 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0075005870dc76a54fa9b4bb9cbf9c5d24012b533ebdd16b94883e8987f9a14d (1/6) added to round #46004
+relayer_1  | 09/25 12:54:00.728 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0075005870dc76a54fa9b4bb9cbf9c5d24012b533ebdd16b94883e8987f9a14d, round: 46004
+relayer_1  | 09/25 12:54:00.732 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0075005870dc76a54fa9b4bb9cbf9c5d24012b533ebdd16b94883e8987f9a14d (1/6) added to round #46004
+backend_1  | 09/25 12:54:03.362 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0075005870dc76a54fa9b4bb9cbf9c5d24012b533ebdd16b94883e8987f9a14d is VALID
+backend_1  | 09/25 12:54:03.494 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43662
+relayer_1  | 09/25 12:54:03.729 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0075005870dc76a54fa9b4bb9cbf9c5d24012b533ebdd16b94883e8987f9a14d is VALID
+relayer_1  | 09/25 12:54:04.999 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:54:08.774 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:54:09.764 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43076
+relayer_1  | 09/25 12:54:10.791 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46004, snapshot hash: 0075005870dc76a54fa9b4bb9cbf9c5d24012b533ebdd16b94883e8987f9a14d to ledger
+relayer_1  | 09/25 12:54:10.792 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46004 is SOLID
+backend_1  | 09/25 12:54:11.591 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46004, snapshot hash: 0075005870dc76a54fa9b4bb9cbf9c5d24012b533ebdd16b94883e8987f9a14d to ledger
+backend_1  | 09/25 12:54:11.592 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46004 is SOLID
+backend_1  | 09/25 12:54:13.495 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43662
+backend_1  | 09/25 12:54:15.188 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:54:15.506 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:54:15.608 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00e8e8343d775973350ffe7ef21a19edb785368d69871a98bf58210859a4641e, round: 46005
+backend_1  | 09/25 12:54:15.611 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00e8e8343d775973350ffe7ef21a19edb785368d69871a98bf58210859a4641e (1/6) added to round #46005
+relayer_1  | 09/25 12:54:15.962 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00e8e8343d775973350ffe7ef21a19edb785368d69871a98bf58210859a4641e, round: 46005
+relayer_1  | 09/25 12:54:15.966 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00e8e8343d775973350ffe7ef21a19edb785368d69871a98bf58210859a4641e (1/6) added to round #46005
+backend_1  | 09/25 12:54:18.608 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00e8e8343d775973350ffe7ef21a19edb785368d69871a98bf58210859a4641e is VALID
+relayer_1  | 09/25 12:54:18.962 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00e8e8343d775973350ffe7ef21a19edb785368d69871a98bf58210859a4641e is VALID
+backend_1  | 09/25 12:54:19.297 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:54:19.766 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43080
+backend_1  | 09/25 12:54:23.496 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43666
+relayer_1  | 09/25 12:54:25.795 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46005, snapshot hash: 00e8e8343d775973350ffe7ef21a19edb785368d69871a98bf58210859a4641e to ledger
+relayer_1  | 09/25 12:54:25.796 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46005 is SOLID
+relayer_1  | 09/25 12:54:26.008 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:54:26.597 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46005, snapshot hash: 00e8e8343d775973350ffe7ef21a19edb785368d69871a98bf58210859a4641e to ledger
+backend_1  | 09/25 12:54:26.598 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46005 is SOLID
+relayer_1  | 09/25 12:54:29.768 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43080
+backend_1  | 09/25 12:54:29.799 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:54:30.235 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:54:30.263 [pool-20-thread-1] INFO  API:1221 - Last 100 PoW consumed 0 seconds processing time.
+backend_1  | 09/25 12:54:30.846 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00412110ce12e3e71d9c8325b76836a1800712f791068acbcd923f08399c8dcc, round: 46006
+backend_1  | 09/25 12:54:30.849 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00412110ce12e3e71d9c8325b76836a1800712f791068acbcd923f08399c8dcc (1/6) added to round #46006
+relayer_1  | 09/25 12:54:31.209 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00412110ce12e3e71d9c8325b76836a1800712f791068acbcd923f08399c8dcc, round: 46006
+relayer_1  | 09/25 12:54:31.213 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00412110ce12e3e71d9c8325b76836a1800712f791068acbcd923f08399c8dcc (1/6) added to round #46006
+backend_1  | 09/25 12:54:33.497 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43670
+backend_1  | 09/25 12:54:33.846 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00412110ce12e3e71d9c8325b76836a1800712f791068acbcd923f08399c8dcc is VALID
+relayer_1  | 09/25 12:54:34.210 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00412110ce12e3e71d9c8325b76836a1800712f791068acbcd923f08399c8dcc is VALID
+relayer_1  | 09/25 12:54:36.513 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:54:39.769 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43084
+backend_1  | 09/25 12:54:40.325 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:54:40.800 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46006, snapshot hash: 00412110ce12e3e71d9c8325b76836a1800712f791068acbcd923f08399c8dcc to ledger
+relayer_1  | 09/25 12:54:40.801 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46006 is SOLID
+backend_1  | 09/25 12:54:41.601 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46006, snapshot hash: 00412110ce12e3e71d9c8325b76836a1800712f791068acbcd923f08399c8dcc to ledger
+backend_1  | 09/25 12:54:41.602 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46006 is SOLID
+backend_1  | 09/25 12:54:43.499 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43670
+backend_1  | 09/25 12:54:45.265 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:54:45.426 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00ef8d8e071969766b6250ea47e35a9bdde8e0f95d62b8193f263d7fd6fc623b, round: 46007
+relayer_1  | 09/25 12:54:45.429 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00ef8d8e071969766b6250ea47e35a9bdde8e0f95d62b8193f263d7fd6fc623b (1/6) added to round #46007
+backend_1  | 09/25 12:54:46.073 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00ef8d8e071969766b6250ea47e35a9bdde8e0f95d62b8193f263d7fd6fc623b (1/6) added to round #46007
+backend_1  | 09/25 12:54:46.071 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00ef8d8e071969766b6250ea47e35a9bdde8e0f95d62b8193f263d7fd6fc623b, round: 46007
+relayer_1  | 09/25 12:54:47.015 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:54:48.427 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00ef8d8e071969766b6250ea47e35a9bdde8e0f95d62b8193f263d7fd6fc623b is VALID
+backend_1  | 09/25 12:54:49.073 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00ef8d8e071969766b6250ea47e35a9bdde8e0f95d62b8193f263d7fd6fc623b is VALID
+relayer_1  | 09/25 12:54:49.770 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43088
+backend_1  | 09/25 12:54:50.849 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:54:53.500 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43674
+relayer_1  | 09/25 12:54:55.805 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46007, snapshot hash: 00ef8d8e071969766b6250ea47e35a9bdde8e0f95d62b8193f263d7fd6fc623b to ledger
+relayer_1  | 09/25 12:54:55.805 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46007 is SOLID
+backend_1  | 09/25 12:54:56.607 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46007, snapshot hash: 00ef8d8e071969766b6250ea47e35a9bdde8e0f95d62b8193f263d7fd6fc623b to ledger
+backend_1  | 09/25 12:54:56.607 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46007 is SOLID
+relayer_1  | 09/25 12:54:57.517 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:54:59.772 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43088
+backend_1  | 09/25 12:55:00.294 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:55:00.636 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00c11ae7178d9c6bc171ba1ef3130de5c804176d73ac8adffb48b079ca78ab51, round: 46008
+relayer_1  | 09/25 12:55:00.638 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00c11ae7178d9c6bc171ba1ef3130de5c804176d73ac8adffb48b079ca78ab51 (1/6) added to round #46008
+backend_1  | 09/25 12:55:01.308 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00c11ae7178d9c6bc171ba1ef3130de5c804176d73ac8adffb48b079ca78ab51, round: 46008
+backend_1  | 09/25 12:55:01.311 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00c11ae7178d9c6bc171ba1ef3130de5c804176d73ac8adffb48b079ca78ab51 (1/6) added to round #46008
+backend_1  | 09/25 12:55:01.375 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:55:03.501 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43678
+relayer_1  | 09/25 12:55:03.636 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00c11ae7178d9c6bc171ba1ef3130de5c804176d73ac8adffb48b079ca78ab51 is VALID
+backend_1  | 09/25 12:55:04.309 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00c11ae7178d9c6bc171ba1ef3130de5c804176d73ac8adffb48b079ca78ab51 is VALID
+relayer_1  | 09/25 12:55:08.024 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:55:09.773 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43092
+relayer_1  | 09/25 12:55:10.808 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46008, snapshot hash: 00c11ae7178d9c6bc171ba1ef3130de5c804176d73ac8adffb48b079ca78ab51 to ledger
+relayer_1  | 09/25 12:55:10.808 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46008 is SOLID
+backend_1  | 09/25 12:55:11.612 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46008, snapshot hash: 00c11ae7178d9c6bc171ba1ef3130de5c804176d73ac8adffb48b079ca78ab51 to ledger
+backend_1  | 09/25 12:55:11.612 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46008 is SOLID
+backend_1  | 09/25 12:55:11.878 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:55:13.503 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43678
+backend_1  | 09/25 12:55:15.317 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:55:15.515 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0098c226b3e3d51c15f8a17206085e5f9c188e0fb67442be8691c18a4ca4b196, round: 46009
+backend_1  | 09/25 12:55:15.517 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0098c226b3e3d51c15f8a17206085e5f9c188e0fb67442be8691c18a4ca4b196 (1/6) added to round #46009
+relayer_1  | 09/25 12:55:15.862 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0098c226b3e3d51c15f8a17206085e5f9c188e0fb67442be8691c18a4ca4b196, round: 46009
+relayer_1  | 09/25 12:55:15.864 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0098c226b3e3d51c15f8a17206085e5f9c188e0fb67442be8691c18a4ca4b196 (1/6) added to round #46009
+relayer_1  | 09/25 12:55:18.528 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:55:18.515 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0098c226b3e3d51c15f8a17206085e5f9c188e0fb67442be8691c18a4ca4b196 is VALID
+relayer_1  | 09/25 12:55:18.863 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0098c226b3e3d51c15f8a17206085e5f9c188e0fb67442be8691c18a4ca4b196 is VALID
+relayer_1  | 09/25 12:55:19.775 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43096
+backend_1  | 09/25 12:55:22.381 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:55:23.504 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43682
+relayer_1  | 09/25 12:55:25.811 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46009, snapshot hash: 0098c226b3e3d51c15f8a17206085e5f9c188e0fb67442be8691c18a4ca4b196 to ledger
+relayer_1  | 09/25 12:55:25.812 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46009 is SOLID
+backend_1  | 09/25 12:55:26.616 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46009, snapshot hash: 0098c226b3e3d51c15f8a17206085e5f9c188e0fb67442be8691c18a4ca4b196 to ledger
+backend_1  | 09/25 12:55:26.616 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46009 is SOLID
+relayer_1  | 09/25 12:55:29.030 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:55:29.776 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43096
+backend_1  | 09/25 12:55:30.350 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:55:30.751 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 002f433492de4f93a904e94b7448278a547ad551dacf1d0885f9530a2db28e82, round: 46010
+backend_1  | 09/25 12:55:30.753 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 002f433492de4f93a904e94b7448278a547ad551dacf1d0885f9530a2db28e82 (1/6) added to round #46010
+relayer_1  | 09/25 12:55:31.098 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 002f433492de4f93a904e94b7448278a547ad551dacf1d0885f9530a2db28e82, round: 46010
+relayer_1  | 09/25 12:55:31.102 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 002f433492de4f93a904e94b7448278a547ad551dacf1d0885f9530a2db28e82 (1/6) added to round #46010
+backend_1  | 09/25 12:55:32.905 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:55:33.505 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43686
+backend_1  | 09/25 12:55:33.751 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 002f433492de4f93a904e94b7448278a547ad551dacf1d0885f9530a2db28e82 is VALID
+relayer_1  | 09/25 12:55:34.099 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 002f433492de4f93a904e94b7448278a547ad551dacf1d0885f9530a2db28e82 is VALID
+relayer_1  | 09/25 12:55:39.532 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:55:39.777 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43100
+relayer_1  | 09/25 12:55:40.816 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46010, snapshot hash: 002f433492de4f93a904e94b7448278a547ad551dacf1d0885f9530a2db28e82 to ledger
+relayer_1  | 09/25 12:55:40.817 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46010 is SOLID
+backend_1  | 09/25 12:55:41.620 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46010, snapshot hash: 002f433492de4f93a904e94b7448278a547ad551dacf1d0885f9530a2db28e82 to ledger
+backend_1  | 09/25 12:55:41.621 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46010 is SOLID
+backend_1  | 09/25 12:55:43.407 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:55:43.506 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43686
+backend_1  | 09/25 12:55:45.363 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:55:45.974 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00310f7e64712bd02073dc3ca9a15cc5e76eac11ebe0f9d268651bd49778ecf4, round: 46011
+backend_1  | 09/25 12:55:45.977 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00310f7e64712bd02073dc3ca9a15cc5e76eac11ebe0f9d268651bd49778ecf4 (1/6) added to round #46011
+relayer_1  | 09/25 12:55:46.332 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00310f7e64712bd02073dc3ca9a15cc5e76eac11ebe0f9d268651bd49778ecf4 (1/6) added to round #46011
+relayer_1  | 09/25 12:55:46.328 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00310f7e64712bd02073dc3ca9a15cc5e76eac11ebe0f9d268651bd49778ecf4, round: 46011
+backend_1  | 09/25 12:55:48.974 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00310f7e64712bd02073dc3ca9a15cc5e76eac11ebe0f9d268651bd49778ecf4 is VALID
+relayer_1  | 09/25 12:55:49.329 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00310f7e64712bd02073dc3ca9a15cc5e76eac11ebe0f9d268651bd49778ecf4 is VALID
+relayer_1  | 09/25 12:55:49.778 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43104
+relayer_1  | 09/25 12:55:50.034 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:55:53.507 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43690
+backend_1  | 09/25 12:55:53.932 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:55:55.821 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46011, snapshot hash: 00310f7e64712bd02073dc3ca9a15cc5e76eac11ebe0f9d268651bd49778ecf4 to ledger
+relayer_1  | 09/25 12:55:55.821 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46011 is SOLID
+backend_1  | 09/25 12:55:56.625 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46011, snapshot hash: 00310f7e64712bd02073dc3ca9a15cc5e76eac11ebe0f9d268651bd49778ecf4 to ledger
+backend_1  | 09/25 12:55:56.625 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46011 is SOLID
+relayer_1  | 09/25 12:55:59.779 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43104
+backend_1  | 09/25 12:56:00.394 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:56:00.536 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+relayer_1  | 09/25 12:56:00.553 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 002ca97f80107bb0fb252d65b9c140b72e6ce8781e0e08eeefd19476da087bd7, round: 46012
+relayer_1  | 09/25 12:56:00.555 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 002ca97f80107bb0fb252d65b9c140b72e6ce8781e0e08eeefd19476da087bd7 (1/6) added to round #46012
+backend_1  | 09/25 12:56:01.201 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 002ca97f80107bb0fb252d65b9c140b72e6ce8781e0e08eeefd19476da087bd7, round: 46012
+backend_1  | 09/25 12:56:01.204 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 002ca97f80107bb0fb252d65b9c140b72e6ce8781e0e08eeefd19476da087bd7 (1/6) added to round #46012
+backend_1  | 09/25 12:56:03.508 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43694
+relayer_1  | 09/25 12:56:03.555 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 002ca97f80107bb0fb252d65b9c140b72e6ce8781e0e08eeefd19476da087bd7 is VALID
+backend_1  | 09/25 12:56:04.202 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 002ca97f80107bb0fb252d65b9c140b72e6ce8781e0e08eeefd19476da087bd7 is VALID
+backend_1  | 09/25 12:56:04.454 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:56:09.780 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43108
+backend_1  | 09/25 12:56:10.630 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46012, snapshot hash: 002ca97f80107bb0fb252d65b9c140b72e6ce8781e0e08eeefd19476da087bd7 to ledger
+backend_1  | 09/25 12:56:10.630 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46012 is SOLID
+relayer_1  | 09/25 12:56:10.825 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46012, snapshot hash: 002ca97f80107bb0fb252d65b9c140b72e6ce8781e0e08eeefd19476da087bd7 to ledger
+relayer_1  | 09/25 12:56:10.826 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46012 is SOLID
+relayer_1  | 09/25 12:56:11.038 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:56:13.510 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43694
+backend_1  | 09/25 12:56:14.956 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:56:15.425 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:56:15.766 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00e5ec4e765113102956a90523e7c479fca666134a90eaf64cb468b9d221ae76, round: 46013
+relayer_1  | 09/25 12:56:15.768 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00e5ec4e765113102956a90523e7c479fca666134a90eaf64cb468b9d221ae76 (1/6) added to round #46013
+backend_1  | 09/25 12:56:16.419 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00e5ec4e765113102956a90523e7c479fca666134a90eaf64cb468b9d221ae76, round: 46013
+backend_1  | 09/25 12:56:16.421 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00e5ec4e765113102956a90523e7c479fca666134a90eaf64cb468b9d221ae76 (1/6) added to round #46013
+relayer_1  | 09/25 12:56:18.767 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00e5ec4e765113102956a90523e7c479fca666134a90eaf64cb468b9d221ae76 is VALID
+backend_1  | 09/25 12:56:19.419 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00e5ec4e765113102956a90523e7c479fca666134a90eaf64cb468b9d221ae76 is VALID
+relayer_1  | 09/25 12:56:19.782 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43112
+relayer_1  | 09/25 12:56:21.545 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:56:23.511 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43698
+backend_1  | 09/25 12:56:25.479 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:56:25.634 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46013, snapshot hash: 00e5ec4e765113102956a90523e7c479fca666134a90eaf64cb468b9d221ae76 to ledger
+backend_1  | 09/25 12:56:25.634 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46013 is SOLID
+relayer_1  | 09/25 12:56:25.831 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46013, snapshot hash: 00e5ec4e765113102956a90523e7c479fca666134a90eaf64cb468b9d221ae76 to ledger
+relayer_1  | 09/25 12:56:25.831 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46013 is SOLID
+relayer_1  | 09/25 12:56:29.783 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43112
+backend_1  | 09/25 12:56:30.456 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:56:30.643 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0056d41c94ee3389f7ca2b3a093ce011eb66af9dcbc5432ae8ab2ab7b8b6e002, round: 46014
+backend_1  | 09/25 12:56:30.646 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0056d41c94ee3389f7ca2b3a093ce011eb66af9dcbc5432ae8ab2ab7b8b6e002 (1/6) added to round #46014
+relayer_1  | 09/25 12:56:31.007 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0056d41c94ee3389f7ca2b3a093ce011eb66af9dcbc5432ae8ab2ab7b8b6e002, round: 46014
+relayer_1  | 09/25 12:56:31.009 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0056d41c94ee3389f7ca2b3a093ce011eb66af9dcbc5432ae8ab2ab7b8b6e002 (1/6) added to round #46014
+relayer_1  | 09/25 12:56:32.053 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:56:33.512 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43702
+backend_1  | 09/25 12:56:33.643 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0056d41c94ee3389f7ca2b3a093ce011eb66af9dcbc5432ae8ab2ab7b8b6e002 is VALID
+relayer_1  | 09/25 12:56:34.008 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0056d41c94ee3389f7ca2b3a093ce011eb66af9dcbc5432ae8ab2ab7b8b6e002 is VALID
+backend_1  | 09/25 12:56:35.982 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:56:39.784 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43116
+backend_1  | 09/25 12:56:40.638 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46014, snapshot hash: 0056d41c94ee3389f7ca2b3a093ce011eb66af9dcbc5432ae8ab2ab7b8b6e002 to ledger
+backend_1  | 09/25 12:56:40.639 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46014 is SOLID
+relayer_1  | 09/25 12:56:40.834 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46014, snapshot hash: 0056d41c94ee3389f7ca2b3a093ce011eb66af9dcbc5432ae8ab2ab7b8b6e002 to ledger
+relayer_1  | 09/25 12:56:40.835 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46014 is SOLID
+relayer_1  | 09/25 12:56:42.555 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:56:43.513 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43702
+backend_1  | 09/25 12:56:45.494 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:56:45.861 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 008f365e70e84a5996595fd955ca87c6c6e9a1c992e77f8903c6e062c44a2c33, round: 46015
+backend_1  | 09/25 12:56:45.863 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 008f365e70e84a5996595fd955ca87c6c6e9a1c992e77f8903c6e062c44a2c33 (1/6) added to round #46015
+relayer_1  | 09/25 12:56:46.263 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 008f365e70e84a5996595fd955ca87c6c6e9a1c992e77f8903c6e062c44a2c33, round: 46015
+relayer_1  | 09/25 12:56:46.265 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 008f365e70e84a5996595fd955ca87c6c6e9a1c992e77f8903c6e062c44a2c33 (1/6) added to round #46015
+backend_1  | 09/25 12:56:46.509 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:56:48.861 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 008f365e70e84a5996595fd955ca87c6c6e9a1c992e77f8903c6e062c44a2c33 is VALID
+relayer_1  | 09/25 12:56:49.264 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 008f365e70e84a5996595fd955ca87c6c6e9a1c992e77f8903c6e062c44a2c33 is VALID
+relayer_1  | 09/25 12:56:49.785 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43120
+relayer_1  | 09/25 12:56:53.060 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:56:53.514 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43706
+backend_1  | 09/25 12:56:55.642 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46015, snapshot hash: 008f365e70e84a5996595fd955ca87c6c6e9a1c992e77f8903c6e062c44a2c33 to ledger
+backend_1  | 09/25 12:56:55.643 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46015 is SOLID
+relayer_1  | 09/25 12:56:55.840 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46015, snapshot hash: 008f365e70e84a5996595fd955ca87c6c6e9a1c992e77f8903c6e062c44a2c33 to ledger
+relayer_1  | 09/25 12:56:55.841 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46015 is SOLID
+backend_1  | 09/25 12:56:57.012 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:56:59.787 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43120
+backend_1  | 09/25 12:57:00.540 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:57:01.096 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00b610c5cf43aea365a6c5563bfffd9d15cf2f6f7df2cac7105a1ff60d068e8d, round: 46016
+backend_1  | 09/25 12:57:01.099 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00b610c5cf43aea365a6c5563bfffd9d15cf2f6f7df2cac7105a1ff60d068e8d (1/6) added to round #46016
+relayer_1  | 09/25 12:57:01.495 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00b610c5cf43aea365a6c5563bfffd9d15cf2f6f7df2cac7105a1ff60d068e8d, round: 46016
+relayer_1  | 09/25 12:57:01.496 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00b610c5cf43aea365a6c5563bfffd9d15cf2f6f7df2cac7105a1ff60d068e8d (1/6) added to round #46016
+backend_1  | 09/25 12:57:03.515 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43710
+relayer_1  | 09/25 12:57:03.565 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:57:04.097 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00b610c5cf43aea365a6c5563bfffd9d15cf2f6f7df2cac7105a1ff60d068e8d is VALID
+relayer_1  | 09/25 12:57:04.495 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00b610c5cf43aea365a6c5563bfffd9d15cf2f6f7df2cac7105a1ff60d068e8d is VALID
+backend_1  | 09/25 12:57:07.526 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:57:09.788 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43124
+backend_1  | 09/25 12:57:10.646 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46016, snapshot hash: 00b610c5cf43aea365a6c5563bfffd9d15cf2f6f7df2cac7105a1ff60d068e8d to ledger
+backend_1  | 09/25 12:57:10.647 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46016 is SOLID
+relayer_1  | 09/25 12:57:10.847 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46016, snapshot hash: 00b610c5cf43aea365a6c5563bfffd9d15cf2f6f7df2cac7105a1ff60d068e8d to ledger
+relayer_1  | 09/25 12:57:10.848 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46016 is SOLID
+backend_1  | 09/25 12:57:13.517 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43710
+relayer_1  | 09/25 12:57:14.067 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:57:15.569 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:57:15.713 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00475acf257aa4b18ae4d442e17a7b98a77805bda3cc9082bde8b8479499ce6d, round: 46017
+relayer_1  | 09/25 12:57:15.716 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00475acf257aa4b18ae4d442e17a7b98a77805bda3cc9082bde8b8479499ce6d (1/6) added to round #46017
+backend_1  | 09/25 12:57:16.310 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00475acf257aa4b18ae4d442e17a7b98a77805bda3cc9082bde8b8479499ce6d, round: 46017
+backend_1  | 09/25 12:57:16.314 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00475acf257aa4b18ae4d442e17a7b98a77805bda3cc9082bde8b8479499ce6d (1/6) added to round #46017
+backend_1  | 09/25 12:57:18.047 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:57:18.714 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00475acf257aa4b18ae4d442e17a7b98a77805bda3cc9082bde8b8479499ce6d is VALID
+backend_1  | 09/25 12:57:19.311 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00475acf257aa4b18ae4d442e17a7b98a77805bda3cc9082bde8b8479499ce6d is VALID
+relayer_1  | 09/25 12:57:19.790 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43128
+backend_1  | 09/25 12:57:23.518 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43714
+relayer_1  | 09/25 12:57:24.569 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+backend_1  | 09/25 12:57:25.651 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46017, snapshot hash: 00475acf257aa4b18ae4d442e17a7b98a77805bda3cc9082bde8b8479499ce6d to ledger
+backend_1  | 09/25 12:57:25.651 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46017 is SOLID
+relayer_1  | 09/25 12:57:25.858 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46017, snapshot hash: 00475acf257aa4b18ae4d442e17a7b98a77805bda3cc9082bde8b8479499ce6d to ledger
+relayer_1  | 09/25 12:57:25.858 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46017 is SOLID
+backend_1  | 09/25 12:57:28.549 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:57:29.792 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43128
+backend_1  | 09/25 12:57:30.592 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:57:30.976 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0063530664ca97fdb2bce1a77c91c2b3a07f79319d89da87e121c5994ace02b3 (1/6) added to round #46018
+relayer_1  | 09/25 12:57:30.973 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0063530664ca97fdb2bce1a77c91c2b3a07f79319d89da87e121c5994ace02b3, round: 46018
+backend_1  | 09/25 12:57:31.532 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0063530664ca97fdb2bce1a77c91c2b3a07f79319d89da87e121c5994ace02b3, round: 46018
+backend_1  | 09/25 12:57:31.535 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0063530664ca97fdb2bce1a77c91c2b3a07f79319d89da87e121c5994ace02b3 (1/6) added to round #46018
+backend_1  | 09/25 12:57:33.520 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43718
+relayer_1  | 09/25 12:57:33.974 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0063530664ca97fdb2bce1a77c91c2b3a07f79319d89da87e121c5994ace02b3 is VALID
+backend_1  | 09/25 12:57:34.533 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0063530664ca97fdb2bce1a77c91c2b3a07f79319d89da87e121c5994ace02b3 is VALID
+relayer_1  | 09/25 12:57:35.072 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:57:39.069 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:57:39.794 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43132
+backend_1  | 09/25 12:57:40.657 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46018, snapshot hash: 0063530664ca97fdb2bce1a77c91c2b3a07f79319d89da87e121c5994ace02b3 to ledger
+backend_1  | 09/25 12:57:40.657 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46018 is SOLID
+relayer_1  | 09/25 12:57:40.866 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46018, snapshot hash: 0063530664ca97fdb2bce1a77c91c2b3a07f79319d89da87e121c5994ace02b3 to ledger
+relayer_1  | 09/25 12:57:40.866 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46018 is SOLID
+backend_1  | 09/25 12:57:43.521 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43718
+relayer_1  | 09/25 12:57:45.574 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:57:45.621 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:57:45.764 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00dccd0428fbe3218980f5084a2e3ddd43900e0707279135f9d255ccad3a751b, round: 46019
+backend_1  | 09/25 12:57:45.766 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00dccd0428fbe3218980f5084a2e3ddd43900e0707279135f9d255ccad3a751b (1/6) added to round #46019
+relayer_1  | 09/25 12:57:46.190 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00dccd0428fbe3218980f5084a2e3ddd43900e0707279135f9d255ccad3a751b, round: 46019
+relayer_1  | 09/25 12:57:46.193 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00dccd0428fbe3218980f5084a2e3ddd43900e0707279135f9d255ccad3a751b (1/6) added to round #46019
+backend_1  | 09/25 12:57:48.766 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00dccd0428fbe3218980f5084a2e3ddd43900e0707279135f9d255ccad3a751b is VALID
+relayer_1  | 09/25 12:57:49.190 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00dccd0428fbe3218980f5084a2e3ddd43900e0707279135f9d255ccad3a751b is VALID
+backend_1  | 09/25 12:57:49.588 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:57:49.795 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43136
+backend_1  | 09/25 12:57:53.523 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43722
+backend_1  | 09/25 12:57:55.661 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46019, snapshot hash: 00dccd0428fbe3218980f5084a2e3ddd43900e0707279135f9d255ccad3a751b to ledger
+backend_1  | 09/25 12:57:55.662 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46019 is SOLID
+relayer_1  | 09/25 12:57:55.870 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46019, snapshot hash: 00dccd0428fbe3218980f5084a2e3ddd43900e0707279135f9d255ccad3a751b to ledger
+relayer_1  | 09/25 12:57:55.870 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46019 is SOLID
+relayer_1  | 09/25 12:57:56.075 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+relayer_1  | 09/25 12:57:59.797 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43136
+backend_1  | 09/25 12:58:00.091 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:58:00.644 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:58:00.999 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00576b7ba7af91850dc873b185a77740603e09de1f9bea9209c7b4cdbe0954bc, round: 46020
+backend_1  | 09/25 12:58:01.002 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00576b7ba7af91850dc873b185a77740603e09de1f9bea9209c7b4cdbe0954bc (1/6) added to round #46020
+relayer_1  | 09/25 12:58:01.421 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00576b7ba7af91850dc873b185a77740603e09de1f9bea9209c7b4cdbe0954bc, round: 46020
+relayer_1  | 09/25 12:58:01.424 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00576b7ba7af91850dc873b185a77740603e09de1f9bea9209c7b4cdbe0954bc (1/6) added to round #46020
+backend_1  | 09/25 12:58:03.528 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43726
+backend_1  | 09/25 12:58:03.999 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00576b7ba7af91850dc873b185a77740603e09de1f9bea9209c7b4cdbe0954bc is VALID
+relayer_1  | 09/25 12:58:04.421 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00576b7ba7af91850dc873b185a77740603e09de1f9bea9209c7b4cdbe0954bc is VALID
+relayer_1  | 09/25 12:58:06.578 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:58:09.799 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43140
+backend_1  | 09/25 12:58:10.619 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:58:10.667 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46020 is SOLID
+backend_1  | 09/25 12:58:10.666 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46020, snapshot hash: 00576b7ba7af91850dc873b185a77740603e09de1f9bea9209c7b4cdbe0954bc to ledger
+relayer_1  | 09/25 12:58:10.875 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46020, snapshot hash: 00576b7ba7af91850dc873b185a77740603e09de1f9bea9209c7b4cdbe0954bc to ledger
+relayer_1  | 09/25 12:58:10.875 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46020 is SOLID
+backend_1  | 09/25 12:58:13.530 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43726
+backend_1  | 09/25 12:58:15.676 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:58:16.249 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00ff39c0159dec6a82203d0aa3b81d9a80b0793134b9df5a9ac2806a40cc680e, round: 46021
+backend_1  | 09/25 12:58:16.251 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00ff39c0159dec6a82203d0aa3b81d9a80b0793134b9df5a9ac2806a40cc680e (1/6) added to round #46021
+relayer_1  | 09/25 12:58:16.658 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00ff39c0159dec6a82203d0aa3b81d9a80b0793134b9df5a9ac2806a40cc680e, round: 46021
+relayer_1  | 09/25 12:58:16.661 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00ff39c0159dec6a82203d0aa3b81d9a80b0793134b9df5a9ac2806a40cc680e (1/6) added to round #46021
+relayer_1  | 09/25 12:58:17.080 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:58:19.250 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00ff39c0159dec6a82203d0aa3b81d9a80b0793134b9df5a9ac2806a40cc680e is VALID
+relayer_1  | 09/25 12:58:19.659 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00ff39c0159dec6a82203d0aa3b81d9a80b0793134b9df5a9ac2806a40cc680e is VALID
+relayer_1  | 09/25 12:58:19.800 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43144
+backend_1  | 09/25 12:58:21.136 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:58:23.531 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43730
+backend_1  | 09/25 12:58:25.671 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46021, snapshot hash: 00ff39c0159dec6a82203d0aa3b81d9a80b0793134b9df5a9ac2806a40cc680e to ledger
+backend_1  | 09/25 12:58:25.672 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46021 is SOLID
+relayer_1  | 09/25 12:58:25.880 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46021, snapshot hash: 00ff39c0159dec6a82203d0aa3b81d9a80b0793134b9df5a9ac2806a40cc680e to ledger
+relayer_1  | 09/25 12:58:25.881 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46021 is SOLID
+relayer_1  | 09/25 12:58:27.583 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:58:29.802 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43144
+backend_1  | 09/25 12:58:30.698 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:58:30.874 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 000fc5f6b367ad7fc6561b85652f74b83b2a10c7a61ce279e51a5f4e624365b9, round: 46022
+relayer_1  | 09/25 12:58:30.877 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 000fc5f6b367ad7fc6561b85652f74b83b2a10c7a61ce279e51a5f4e624365b9 (1/6) added to round #46022
+backend_1  | 09/25 12:58:31.494 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 000fc5f6b367ad7fc6561b85652f74b83b2a10c7a61ce279e51a5f4e624365b9, round: 46022
+backend_1  | 09/25 12:58:31.497 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 000fc5f6b367ad7fc6561b85652f74b83b2a10c7a61ce279e51a5f4e624365b9 (1/6) added to round #46022
+backend_1  | 09/25 12:58:31.653 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:58:33.533 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43734
+relayer_1  | 09/25 12:58:33.876 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 000fc5f6b367ad7fc6561b85652f74b83b2a10c7a61ce279e51a5f4e624365b9 is VALID
+backend_1  | 09/25 12:58:34.496 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 000fc5f6b367ad7fc6561b85652f74b83b2a10c7a61ce279e51a5f4e624365b9 is VALID
+relayer_1  | 09/25 12:58:38.085 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 4999/0
+relayer_1  | 09/25 12:58:39.804 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43148
+backend_1  | 09/25 12:58:40.676 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46022, snapshot hash: 000fc5f6b367ad7fc6561b85652f74b83b2a10c7a61ce279e51a5f4e624365b9 to ledger
+backend_1  | 09/25 12:58:40.676 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46022 is SOLID
+relayer_1  | 09/25 12:58:40.887 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46022 is SOLID
+relayer_1  | 09/25 12:58:40.887 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46022, snapshot hash: 000fc5f6b367ad7fc6561b85652f74b83b2a10c7a61ce279e51a5f4e624365b9 to ledger
+backend_1  | 09/25 12:58:42.156 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:58:43.534 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43734
+backend_1  | 09/25 12:58:45.725 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:58:46.108 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 007ca3b0739a2f4bde81ecaf8718443ee2e59bb356aef9920deccad0c203e4c9 (1/6) added to round #46023
+relayer_1  | 09/25 12:58:46.105 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 007ca3b0739a2f4bde81ecaf8718443ee2e59bb356aef9920deccad0c203e4c9, round: 46023
+backend_1  | 09/25 12:58:46.750 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 007ca3b0739a2f4bde81ecaf8718443ee2e59bb356aef9920deccad0c203e4c9, round: 46023
+backend_1  | 09/25 12:58:46.753 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 007ca3b0739a2f4bde81ecaf8718443ee2e59bb356aef9920deccad0c203e4c9 (1/6) added to round #46023
+relayer_1  | 09/25 12:58:48.587 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:58:49.106 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 007ca3b0739a2f4bde81ecaf8718443ee2e59bb356aef9920deccad0c203e4c9 is VALID
+backend_1  | 09/25 12:58:49.751 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 007ca3b0739a2f4bde81ecaf8718443ee2e59bb356aef9920deccad0c203e4c9 is VALID
+relayer_1  | 09/25 12:58:49.805 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43152
+backend_1  | 09/25 12:58:52.680 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:58:53.535 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43738
+backend_1  | 09/25 12:58:55.680 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46023, snapshot hash: 007ca3b0739a2f4bde81ecaf8718443ee2e59bb356aef9920deccad0c203e4c9 to ledger
+backend_1  | 09/25 12:58:55.680 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46023 is SOLID
+relayer_1  | 09/25 12:58:55.890 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46023, snapshot hash: 007ca3b0739a2f4bde81ecaf8718443ee2e59bb356aef9920deccad0c203e4c9 to ledger
+relayer_1  | 09/25 12:58:55.890 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46023 is SOLID
+relayer_1  | 09/25 12:58:59.089 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:58:59.807 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43152
+backend_1  | 09/25 12:59:00.747 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:59:00.978 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0037d956270787f75dea1cbb4f783c77bd05439caf9cefaf4338320af6a10aad, round: 46024
+backend_1  | 09/25 12:59:00.980 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0037d956270787f75dea1cbb4f783c77bd05439caf9cefaf4338320af6a10aad (1/6) added to round #46024
+relayer_1  | 09/25 12:59:01.350 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0037d956270787f75dea1cbb4f783c77bd05439caf9cefaf4338320af6a10aad, round: 46024
+relayer_1  | 09/25 12:59:01.353 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0037d956270787f75dea1cbb4f783c77bd05439caf9cefaf4338320af6a10aad (1/6) added to round #46024
+backend_1  | 09/25 12:59:03.197 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:59:03.536 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43742
+backend_1  | 09/25 12:59:03.980 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0037d956270787f75dea1cbb4f783c77bd05439caf9cefaf4338320af6a10aad is VALID
+relayer_1  | 09/25 12:59:04.350 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0037d956270787f75dea1cbb4f783c77bd05439caf9cefaf4338320af6a10aad is VALID
+relayer_1  | 09/25 12:59:09.595 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+relayer_1  | 09/25 12:59:09.808 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43156
+backend_1  | 09/25 12:59:10.684 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46024, snapshot hash: 0037d956270787f75dea1cbb4f783c77bd05439caf9cefaf4338320af6a10aad to ledger
+backend_1  | 09/25 12:59:10.684 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46024 is SOLID
+relayer_1  | 09/25 12:59:10.893 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46024, snapshot hash: 0037d956270787f75dea1cbb4f783c77bd05439caf9cefaf4338320af6a10aad to ledger
+relayer_1  | 09/25 12:59:10.894 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46024 is SOLID
+backend_1  | 09/25 12:59:13.538 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43742
+backend_1  | 09/25 12:59:13.699 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:59:15.772 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:59:16.203 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0046a9bee7902ec50357cf57d48c7e9d747b752faff31ff5f3ac1d7ce9dfd636, round: 46025
+backend_1  | 09/25 12:59:16.206 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0046a9bee7902ec50357cf57d48c7e9d747b752faff31ff5f3ac1d7ce9dfd636 (1/6) added to round #46025
+relayer_1  | 09/25 12:59:16.575 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 0046a9bee7902ec50357cf57d48c7e9d747b752faff31ff5f3ac1d7ce9dfd636, round: 46025
+relayer_1  | 09/25 12:59:16.577 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 0046a9bee7902ec50357cf57d48c7e9d747b752faff31ff5f3ac1d7ce9dfd636 (1/6) added to round #46025
+backend_1  | 09/25 12:59:19.203 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0046a9bee7902ec50357cf57d48c7e9d747b752faff31ff5f3ac1d7ce9dfd636 is VALID
+relayer_1  | 09/25 12:59:19.575 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 0046a9bee7902ec50357cf57d48c7e9d747b752faff31ff5f3ac1d7ce9dfd636 is VALID
+relayer_1  | 09/25 12:59:19.809 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43160
+relayer_1  | 09/25 12:59:20.101 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:59:23.539 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43746
+backend_1  | 09/25 12:59:24.216 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:59:25.689 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46025, snapshot hash: 0046a9bee7902ec50357cf57d48c7e9d747b752faff31ff5f3ac1d7ce9dfd636 to ledger
+backend_1  | 09/25 12:59:25.689 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46025 is SOLID
+relayer_1  | 09/25 12:59:25.898 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46025 is SOLID
+relayer_1  | 09/25 12:59:25.897 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46025, snapshot hash: 0046a9bee7902ec50357cf57d48c7e9d747b752faff31ff5f3ac1d7ce9dfd636 to ledger
+relayer_1  | 09/25 12:59:29.811 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43160
+relayer_1  | 09/25 12:59:30.603 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:59:30.812 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+backend_1  | 09/25 12:59:31.435 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00050059ebd87dffed264e23b277ca3d50c3640bdce0e050e7fc6ed1541c2550, round: 46026
+backend_1  | 09/25 12:59:31.438 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00050059ebd87dffed264e23b277ca3d50c3640bdce0e050e7fc6ed1541c2550 (1/6) added to round #46026
+relayer_1  | 09/25 12:59:31.809 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00050059ebd87dffed264e23b277ca3d50c3640bdce0e050e7fc6ed1541c2550, round: 46026
+relayer_1  | 09/25 12:59:31.811 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00050059ebd87dffed264e23b277ca3d50c3640bdce0e050e7fc6ed1541c2550 (1/6) added to round #46026
+backend_1  | 09/25 12:59:33.541 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43750
+backend_1  | 09/25 12:59:34.435 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00050059ebd87dffed264e23b277ca3d50c3640bdce0e050e7fc6ed1541c2550 is VALID
+backend_1  | 09/25 12:59:34.739 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+relayer_1  | 09/25 12:59:34.810 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Milestone 00050059ebd87dffed264e23b277ca3d50c3640bdce0e050e7fc6ed1541c2550 is VALID
+relayer_1  | 09/25 12:59:39.812 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43164
+backend_1  | 09/25 12:59:40.692 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46026, snapshot hash: 00050059ebd87dffed264e23b277ca3d50c3640bdce0e050e7fc6ed1541c2550 to ledger
+backend_1  | 09/25 12:59:40.692 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46026 is SOLID
+relayer_1  | 09/25 12:59:40.902 [Latest Solid Milestone Tracker] DEBUG SnapshotServiceImpl:156 - Applying round #46026, snapshot hash: 00050059ebd87dffed264e23b277ca3d50c3640bdce0e050e7fc6ed1541c2550 to ledger
+relayer_1  | 09/25 12:59:40.902 [Latest Solid Milestone Tracker] DEBUG LatestSolidMilestoneTrackerImpl:391 - Round #46026 is SOLID
+relayer_1  | 09/25 12:59:41.110 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 5000/0
+backend_1  | 09/25 12:59:43.542 [pool-15-thread-2] INFO  Node:704 - toProcess = 0 , toBroadcast = 0 , toRequest = 0 , toReply = 0 / totalTransactions = 43750
+backend_1  | 09/25 12:59:45.241 [Tip Solidity Rescan] DEBUG TipsSolidifier:52 - #Solid/NonSolid: 50/0
+backend_1  | 09/25 12:59:45.847 [pool-20-thread-1] DEBUG MilestonePublisher:186 - Publishing next Milestone...
+relayer_1  | 09/25 12:59:46.022 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00549d9234d8b8235f8354e2034ac5078ead32d00db8a65a364003a01b0e7f37, round: 46027
+relayer_1  | 09/25 12:59:46.023 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00549d9234d8b8235f8354e2034ac5078ead32d00db8a65a364003a01b0e7f37 (1/6) added to round #46027
+backend_1  | 09/25 12:59:46.672 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:391 - Process Milestone 00549d9234d8b8235f8354e2034ac5078ead32d00db8a65a364003a01b0e7f37, round: 46027
+backend_1  | 09/25 12:59:46.675 [Latest Milestone Tracker] DEBUG MilestoneTrackerImpl:170 - New milestone 00549d9234d8b8235f8354e2034ac5078ead32d00db8a65a364003a01b0e7f37 (1/6) added to round #46027
