@@ -48,27 +48,6 @@ api_request_metrics = [
     '{}_wereAddressesSpentFrom', '{}_findTransactions'
 ]
 
-"""
-I have samples for the instances with + ...
-{}_addNeighbors +
-{}_getNodeInfo +
-{}_attachToTangle +
-{}_broadcastTransactions +
-{}_getBalances +
-{}_getInclusionStates +
-{}_getNeighbors +
-{}_getNodeAPIConfiguration +
-{}_getTips +
-{}_getTransactionsToApprove +
-{}_getTransactionStrings +
-{}_interruptAttachingToTangle +
-{}_removeNeighbors +
-{}_storeTransactions +
-{}_getMissingTransactions ?
-{}_checkConsistency ?
-{}_wereAddressesSpentFrom +
-{}_findTransactions
-"""
 x_class_metrics = [
     '{}_toProcess', '{}_toBroadcast', '{}_toRequest', '{}_toReply',
     '{}_totalTransactions', '{}_tailsTraversed', '{}_solid', '{}_nonSolid',
@@ -102,8 +81,8 @@ then we could first match for findTransactions and then proceed.
 """
 def match_for_api_request(api_request_metrics, line):
     for metric in api_request_metrics:
-        if re.search(metric, line):
-            return metric
+        if re.search(metric[3:], line):
+            return metric[3:]
     return None
 
 def parse_rstats(line):
