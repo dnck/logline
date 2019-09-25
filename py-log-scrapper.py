@@ -59,7 +59,8 @@ node_metrics = {
         'checkConsistency': Gauge('zmq_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('zmq_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('zmq_startSpamming', ''),
-        'stopSpamming': Gauge('zmq_stopSpamming', '')
+        'stopSpamming': Gauge('zmq_stopSpamming', ''),
+        'findTransactions': Gauge('zmq_findTransactions', '')
     },
     'wallet.hlxtest': {
         'toProcess': Gauge('wallet_toProcess', ''),
@@ -91,7 +92,8 @@ node_metrics = {
         'checkConsistency': Gauge('wallet_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('wallet_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('wallet_startSpamming', ''),
-        'stopSpamming': Gauge('wallet_stopSpamming', '')
+        'stopSpamming': Gauge('wallet_stopSpamming', ''),
+        'findTransactions': Gauge('wallet_findTransactions', '')
     },
     'node_1': {
         'toProcess': Gauge('node1_toProcess', ''),
@@ -123,7 +125,8 @@ node_metrics = {
         'checkConsistency': Gauge('node1_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('node1_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('node1_startSpamming', ''),
-        'stopSpamming': Gauge('node1_stopSpamming', '')
+        'stopSpamming': Gauge('node1_stopSpamming', ''),
+        'findTransactions': Gauge('node1_findTransactions', '')
     },
     'node_2': {
         'toProcess': Gauge('node2_toProcess', ''),
@@ -155,7 +158,8 @@ node_metrics = {
         'checkConsistency': Gauge('node2_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('node2_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('node2_startSpamming', ''),
-        'stopSpamming': Gauge('node2_stopSpamming', '')
+        'stopSpamming': Gauge('node2_stopSpamming', ''),
+        'findTransactions': Gauge('node2_findTransactions', '')
     },
     'node_3': {
         'toProcess': Gauge('node3_toProcess', ''),
@@ -187,7 +191,8 @@ node_metrics = {
         'checkConsistency': Gauge('node3_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('node3_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('node3_startSpamming', ''),
-        'stopSpamming': Gauge('node3_stopSpamming', '')
+        'stopSpamming': Gauge('node3_stopSpamming', ''),
+        'findTransactions': Gauge('node3_findTransactions', '')
     },
     'hlxtest': {
         'toProcess': Gauge('hlxtest_toProcess', ''),
@@ -219,7 +224,8 @@ node_metrics = {
         'checkConsistency': Gauge('hlxtest_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('hlxtest_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('hlxtest_startSpamming', ''),
-        'stopSpamming': Gauge('hlxtest_stopSpamming', '')
+        'stopSpamming': Gauge('hlxtest_stopSpamming', ''),
+        'findTransactions': Gauge('hlxtest_findTransactions', '')
     },
     'nominee_1': {
         'toProcess': Gauge('nominee_1_toProcess', ''),
@@ -251,7 +257,8 @@ node_metrics = {
         'checkConsistency': Gauge('nominee_1_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('nominee_1_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('nominee_1_startSpamming', ''),
-        'stopSpamming': Gauge('nominee_1_stopSpamming', '')
+        'stopSpamming': Gauge('nominee_1_stopSpamming', ''),
+        'findTransactions': Gauge('nominee_1_findTransactions', '')
     },
     'nominee_2': {
         'toProcess': Gauge('nominee_2_toProcess', ''),
@@ -283,7 +290,8 @@ node_metrics = {
         'checkConsistency': Gauge('nominee_2_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('nominee_2_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('nominee_2_startSpamming', ''),
-        'stopSpamming': Gauge('nominee_2_stopSpamming', '')
+        'stopSpamming': Gauge('nominee_2_stopSpamming', ''),
+        'findTransactions': Gauge('nominee_2_findTransactions', '')
     },
     'nominee_3': {
         'toProcess': Gauge('nominee_3_toProcess', ''),
@@ -315,7 +323,8 @@ node_metrics = {
         'checkConsistency': Gauge('nominee_3_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('nominee_3_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('nominee_3_startSpamming', ''),
-        'stopSpamming': Gauge('nominee_3_stopSpamming', '')
+        'stopSpamming': Gauge('nominee_3_stopSpamming', ''),
+        'findTransactions': Gauge('nominee_3_findTransactions', '')
     },
     'nominee_4': {
         'toProcess': Gauge('nominee_4_toProcess', ''),
@@ -347,7 +356,8 @@ node_metrics = {
         'checkConsistency': Gauge('nominee_4_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('nominee_4_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('nominee_4_startSpamming', ''),
-        'stopSpamming': Gauge('nominee_4_stopSpamming', '')
+        'stopSpamming': Gauge('nominee_4_stopSpamming', ''),
+        'findTransactions': Gauge('nominee_4_findTransactions', '')
     },
     'nominee_5': {
         'toProcess': Gauge('nominee_5_toProcess', ''),
@@ -379,7 +389,8 @@ node_metrics = {
         'checkConsistency': Gauge('nominee_5_checkConsistency', ''),
         'wereAddressesSpentFrom': Gauge('nominee_5_wereAddressesSpentFrom', ''),
         'startSpamming': Gauge('nominee_5_startSpamming', ''),
-        'stopSpamming': Gauge('nominee_5_stopSpamming', '')
+        'stopSpamming': Gauge('nominee_5_stopSpamming', ''),
+        'findTransactions': Gauge('nominee_5_findTransactions', '')
     },
 }
 
@@ -403,7 +414,7 @@ def match_for_api_request(line):
     if re.search("getNeighbors", line):
         return "getNeighbors"
     if re.search("addNeighbors", line):
-        return "findTransactions"
+        return "addNeighbors"
     if re.search("getNodeAPIConfiguration", line):
         return "getNodeAPIConfiguration"
     if re.search("getTips", line):
@@ -464,13 +475,26 @@ def match_class_outside_api(line):
     if re.search("DNS Checker", line):
         return {"dnsCheck": 1}
 
+    if re.search("balance is not consistent", line):
+        if re.search("Validation failed:", line):
+            print(line)
+            return {"validationFailure": 1}
+
     return None
 
 def inc_api_metric(node_id, api_request):
     node_metrics[node_id][api_request].inc()
 
 def set_class_metric(node_id, metric, val):
-    node_metrics[node_id][metric].set(val)
+    if "metric" in node_metrics[node_id]:
+        node_metrics[node_id][metric].set(val)
+    else:
+        node_metrics[node_id][metric] = \
+            Gauge('{}_{}'.format(node_id, metric),
+                'The values of the metric {} for node {}'.format(
+                    metric, node_id
+                )
+            )
 
 def export_metrics(exporter_queue):
     while True:
@@ -555,7 +579,6 @@ if __name__ == '__main__':
     exporter_queue = Queue()
 
     start_http_server(9111)
-
 
     send_to_queue_thread = threading.Thread(
         target=trail_log, args = (exporter_queue, ARGS.fname,)
