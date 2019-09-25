@@ -4,11 +4,19 @@ import threading
 import socket
 import json
 import sys
+import
 
 if sys.version_info.major > 2:
     from queue import Queue
 else:
     from Queue import Queue
+
+# Can not use this due to docker
+# Is there a way around it?
+# def get_node_name():
+#     hostname = socket.gethostname()
+#     name = hashlib.sha1(hostname.encode("UTF-8")).hexdigest()
+#     return name[0:8]
 
 def trail_log(broadcast_queue, fname):
     with open(fname, 'r') as fname:
@@ -57,10 +65,10 @@ if __name__ == '__main__':
         help='The name of the node to prepend to the log lines'
     )
 
+
     args = PARSER.parse_args()
 
-    if not (args.node_name == ""):
-        args.node_name = args.node_name + " | "
+    #node_name = get_node_name()
 
     broadcast_queue = Queue()
 
@@ -70,7 +78,7 @@ if __name__ == '__main__':
 
     broadcast_to_receiver_thread = threading.Thread(
         target=send_datagram,
-        args = (broadcast_queue, args.host, args.port, args.node_name)
+        args = (broadcast_queue, args.host, args.port,  args.node_name,)
     )
 
     send_to_queue_thread.start()
