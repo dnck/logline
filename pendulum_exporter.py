@@ -12,9 +12,9 @@ else:
     from Queue import Queue
 
 IO_OPTIONS = {
-    'stdout_only': True, 'level': 'info',
-    'parentdir': '/home/hlx-dev/helix/logline',
-    'log_filename': 'test.log'
+    'stdout_only': False, 'level': 'info',
+    'parentdir': './',
+    'log_filename': 'pendulum_export.log'
 }
 
 log_manager = results_manager.ResultsManager(IO_OPTIONS)
