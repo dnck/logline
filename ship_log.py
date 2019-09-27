@@ -4,7 +4,7 @@ import threading
 import socket
 import json
 import sys
-import
+
 
 if sys.version_info.major > 2:
     from queue import Queue
