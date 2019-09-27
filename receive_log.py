@@ -33,7 +33,7 @@ if __name__ == '__main__':
         help='The log server port where we listen on'
     )
     PARSER.add_argument('-fname',
-        metavar='fname', type=int, default=5222,
+        metavar='fname', type=str, default="test",
         help='The name of the log to write. Will be written in logs dir.'
     )
 
