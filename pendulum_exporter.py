@@ -125,8 +125,11 @@ def match_class_outside_api(line):
 
     if re.search("balance is not consistent", line):
         if re.search("Validation failed:", line):
-            print(line)
+            #print(line)
             return {"validationFailure": 1}
+
+    if re.search("Invalid transaction timestamp", line):
+        return {"validationFailure": 1}
 
     return None
 
