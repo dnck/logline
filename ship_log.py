@@ -3,8 +3,9 @@ import time
 import threading
 import socket
 import json
+import os
 import sys
-
+import datetime
 
 if sys.version_info.major > 2:
     from queue import Queue
@@ -43,13 +44,21 @@ def _send_datagram(host, port, postdata, node_name):
         (host, port)
     )
 
+def dtobj_from_str(time_string):
+    """Get a datetime object from an appropriately formatted string."""
+    dt_obj = datetime.datetime.strptime(
+        time_string, "%Y-%m-%d-%H-%M-%S"
+    )
+    return dt_obj
+
+
 if __name__ == '__main__':
 
     PARSER = argparse.ArgumentParser(
         description='Log line shipper.'
     )
-    PARSER.add_argument('-fname',
-        metavar='fname', type=str, default='',
+    PARSER.add_argument('directory',
+        metavar='directory', type=str, default='',
         help='Full path and filename of the log to tail and ship to server'
     )
     PARSER.add_argument('-host',
@@ -68,12 +77,19 @@ if __name__ == '__main__':
 
     args = PARSER.parse_args()
 
+    log_files = {
+        dtobj_from_str(s.split("log-")[1][:19]): \
+            s for s in os.listdir(args.directory)
+    }
+    sorted_log_files = sorted(list(log_files.keys()))
+    fname = os.path.join(directory, log_files[sorted_log_files[0]])
+
     #node_name = get_node_name()
 
     broadcast_queue = Queue()
 
     send_to_queue_thread = threading.Thread(
-        target=trail_log, args = (broadcast_queue, args.fname,)
+        target=trail_log, args = (broadcast_queue, fname,)
     )
 
     broadcast_to_receiver_thread = threading.Thread(
