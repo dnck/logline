@@ -51,7 +51,7 @@ api_request_metrics = [
 x_class_metrics = [
     '{}_toProcess', '{}_toBroadcast', '{}_toRequest', '{}_toReply',
     '{}_totalTransactions', '{}_tailsTraversed', '{}_solid', '{}_nonSolid',
-    '{}_dnsCheck', '{}_milestoneChange', '{}_solidMilestoneChange'
+    '{}_dnsCheck', '{}_milestoneChange', '{}_solidMilestoneChange', '{}_syncCheck'
 ]
 
 """
@@ -130,6 +130,10 @@ def match_class_outside_api(line):
 
     if re.search("Invalid transaction timestamp", line):
         return {"validationFailure": 1}
+
+    if re.search("Sync check = ", line):
+        sync_check = (line.split("Sync check = ")[-1])
+        return {"syncCheck": sync_check}
 
     return None
 
