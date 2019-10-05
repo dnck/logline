@@ -83,20 +83,20 @@ if __name__ == '__main__':
     }
     sorted_log_files = sorted(list(log_files.keys()))
     fname = os.path.join(args.directory, log_files[sorted_log_files[-1]])
-    print(fname)
+
     #node_name = get_node_name()
-    #
-    # broadcast_queue = Queue()
-    #
-    # send_to_queue_thread = threading.Thread(
-    #     target=trail_log, args = (broadcast_queue, fname,)
-    # )
-    #
-    # broadcast_to_receiver_thread = threading.Thread(
-    #     target=send_datagram,
-    #     args = (broadcast_queue, args.host, args.port,  args.node_name,)
-    # )
-    #
-    # send_to_queue_thread.start()
-    #
-    # broadcast_to_receiver_thread.start()
+
+    broadcast_queue = Queue()
+
+    send_to_queue_thread = threading.Thread(
+        target=trail_log, args = (broadcast_queue, fname,)
+    )
+
+    broadcast_to_receiver_thread = threading.Thread(
+        target=send_datagram,
+        args = (broadcast_queue, args.host, args.port,  args.node_name,)
+    )
+
+    send_to_queue_thread.start()
+
+    broadcast_to_receiver_thread.start()
