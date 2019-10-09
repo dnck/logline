@@ -227,6 +227,12 @@ def export_metrics(exporter_queue):
                             )
                         )
 
+# class NewMetricCache:
+#     def __init__(self):
+#         self.cache = {}#{node_id: {data[0], data[1]}}
+#     def new_record(self, node):
+#         self.cache[node] = {}
+
 def trail_log(exporter_queue, fname):
     with open(fname, 'r') as fname:
         fname.seek(0,2) # Go to the end of the file
@@ -249,12 +255,19 @@ if __name__ == '__main__':
         default='',
         help='Log file to scrap'
     )
+    PARSER.add_argument(
+        '-server_port',
+        metavar='server_port',
+        type=int,
+        default=9111,
+        help='Port to push the metrics to. In case multiple exporters running.'
+    )
 
     ARGS = PARSER.parse_args()
 
     exporter_queue = Queue()
 
-    start_http_server(9111)
+    start_http_server(ARGS.server_port)
 
     send_to_queue_thread = threading.Thread(
         target=trail_log, args = (exporter_queue, ARGS.fname,)
