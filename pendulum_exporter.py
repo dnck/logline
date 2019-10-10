@@ -11,34 +11,24 @@ if sys.version_info.major > 2:
 else:
     from Queue import Queue
 
+
+NODE_METRICS = {}
+
+KNOWN_NODES = []
+
 IO_OPTIONS = {
-    'stdout_only': False, 'level': 'info',
+    'stdout_only': True, 'level': 'info',
     'parentdir': './',
     'log_filename': 'pendulum_export.log'
 }
 
 log_manager = results_manager.ResultsManager(IO_OPTIONS)
 
-logger = log_manager.logger
+log = log_manager.logger
 
-known_node_names = [
-    "zmq", "hlxtest", "wallet", "node1", "node2", "node3",
-    "nominee_1", "nominee_2", "nominee_3", "nominee_3", "nominee_5"
-]
+NODE_NAME_PATTERN = re.compile(r"^[a-zA-Z0-9._]+")
 
-"""
-NO! Can't use this logic due to docker
-The node_id_pattern matches the first segment of the logline. It is assumed
-that the loglines are shipped with a unique hexdecimal string of len 8
-This is cared for by the ship_log.py or pipe_log.py programs.
-The program hashes the hostname and concatenates this hashed hostname
-to the start of the logline.
-node_id_pattern = re.compile(r"^[a-fA-F0-9]+")
-"""
-
-node_id_pattern = re.compile(r"^[a-zA-Z0-9._]+")
-
-api_request_metrics = [
+API_REQUEST_METRICS = [
     '{}_addNeighbors', '{}_getNodeInfo', '{}_attachToTangle',
     '{}_broadcastTransactions', '{}_getBalances', '{}_getInclusionStates',
     '{}_getNeighbors', '{}_getNodeAPIConfiguration', '{}_getTips',
@@ -48,42 +38,146 @@ api_request_metrics = [
     '{}_wereAddressesSpentFrom', '{}_findTransactions'
 ]
 
-x_class_metrics = [
+X_CLASS_METRICS = [
     '{}_toProcess', '{}_toBroadcast', '{}_toRequest', '{}_toReply',
     '{}_totalTransactions', '{}_tailsTraversed', '{}_solid', '{}_nonSolid',
-    '{}_dnsCheck', '{}_milestoneChange', '{}_solidMilestoneChange', '{}_syncCheck'
+    '{}_dnsCheck', '{}_milestoneValid', '{}_solidMilestoneChange',
+    '{}_syncCheck', '{}_nodeStoredTx', '{}_apiStoredTx',
+    '{}_invalidTimestamp', "{}_inconsistentBalance"
 ]
 
-"""
-We construct all of the gauges for nodes here.
-Current downside here is the insistent usage of the Gauge.
-We should investigate our metric types in prom.
-"""
-def construct_metrics(node_name, api_request_metrics, x_class_metrics):
+def start_tracking_nodes_metrics(node_name):
+    if node_name not in KNOWN_NODES and len(KNOWN_NODES) < 20:
+        KNOWN_NODES.append(node_name)
+        NODE_METRICS.update(
+            construct_metrics(
+                node_name,
+                API_REQUEST_METRICS,
+                X_CLASS_METRICS
+            )
+        )
+        log.info("Constructed new metric dictionary for {}".format(node_name))
+
+
+def construct_metrics(node_name, API_REQUEST_METRICS, X_CLASS_METRICS):
+    """
+    Return a dictionary for use exporting to prometheus
+        {
+        node_node: {
+            metric_name: {
+                Gauge(node_name_metric_name)
+            }
+        }
+    }
+    """
     metrics = {
         node_name: {
             metric[3:]: Gauge(metric.format(node_name), 'api metrics')
-                for metric in api_request_metrics
+                for metric in API_REQUEST_METRICS
         }
     }
-    for metric in x_class_metrics:
+    for metric in X_CLASS_METRICS:
         metrics[node_name].update(
             {metric[3:]: Gauge(metric.format(node_name), 'class metrics')}
         )
     return metrics
 
-"""
-The downside of this method is that we iterate through the
-api request types without knowing the frequency distribution
-of their occurence in the wild. If we knew that findTransactions
-occurs more frequenctly than checkConsistency, for example,
-then we could first match for findTransactions and then proceed.
-"""
-def match_for_api_request(api_request_metrics, line):
-    for metric in api_request_metrics:
+
+def match_api_request(node_name, line):
+    for metric in API_REQUEST_METRICS:
         if re.search(metric[3:], line):
-            return metric[3:]
+            inc_class_metric(node_name, metric[3:])
+            return (metric[3:], 1)
     return None
+
+
+def match_x_class(node_name, line):
+    if re.search("API:602 - Stored_txhash", line):
+        inc_class_metric(node_name, "apiStoredTx")
+        return ("apiStoredTx", 1)
+
+    if re.search("Node:474 - Stored_txhash", line):
+        inc_class_metric(node_name, "nodeStoredTx")
+        return ("nodeStoredTx", 1)
+
+    if re.search("totalTransactions", line):
+        rstats = set_rstat_metrics(node_name, line)
+        return ("rstats", rstats)
+
+    if re.search("traversed", line):
+        ntails =\
+            int(line.split(" tails traversed to find tip")[0].split('- ')[1])
+        set_class_metric(node_name, "tailsTraversed", ntails)
+        return ("tailsTraversed", 1)
+
+    if re.search("#Solid/NonSolid", line):
+        solid, non_solid = \
+            [int(i) for i in line.split("#Solid/NonSolid: ")[1].split('/')]
+        set_class_metric(node_name, 'solid', solid)
+        set_class_metric(node_name, 'nonSolid', non_solid)
+        return ("Solid/NonSolid", (solid, non_solid))
+
+    if re.search("DEBUG MilestoneTrackerImpl:391 - Milestone ", line):
+        if re.search("VALID", line):
+            inc_class_metric(node_name, "milestoneValid")
+            return ("milestoneValid", 1)
+        return None
+
+    if re.search("[generating solid entry points]: 100.00%", line):#snapshot
+        inc_class_metric(node_name, "snapShot")
+        return ("snapShot", 1)
+
+    if re.search("DNS Checker", line):
+        inc_class_metric(node_name, "dnsCheck")
+        return ("dnsCheck", 1)
+
+    if re.search("balance is not consistent", line):
+        if re.search("Validation failed:", line):
+            inc_class_metric(node_name, "inconsistentBalance")
+            return ("inconsistentBalance", 1)
+        return None
+
+    if re.search("Invalid transaction timestamp", line):
+        inc_class_metric(node_name, "invalidTimestamp")
+        return ("invalidTimestamp", 1)
+
+    if re.search("Sync check = ", line):
+        sync_check = (line.split("Sync check = ")[-1])
+        set_class_metric(node_name, "syncCheck", sync_check)
+        return ("syncCheck", sync_check)
+
+    return None
+
+
+def inc_class_metric(node_name, metric):
+    """metric should be a string in the node's metrics dictionary"""
+    NODE_METRICS[node_name][metric].inc()
+
+
+def set_class_metric(node_id, metric, val):
+    """metric should be a string in the node's metrics dictionary"""
+    NODE_METRICS[node_id][metric].set(val)
+
+
+def set_rstat_metrics(node_name, line):
+    rstats = parse_rstats(line) # rstats is tuple where idx is val
+    set_class_metric(
+        node_name, 'toProcess', rstats[0]
+    )
+    set_class_metric(
+        node_name, 'toBroadcast', rstats[1]
+    )
+    set_class_metric(
+        node_name, 'toRequest', rstats[2]
+    )
+    set_class_metric(
+        node_name, 'toReply', rstats[3]
+    )
+    set_class_metric(
+        node_name, 'totalTransactions', rstats[4]
+    )
+    return rstats
+
 
 def parse_rstats(line):
     line = line.split("= ")
@@ -94,144 +188,41 @@ def parse_rstats(line):
     totalTransactions = int(line[5])
     return (toProcess, toBroadcast, toRequest, toReply, totalTransactions)
 
-def match_class_outside_api(line):
-    if re.search("totalTransactions", line):
-        rstats = parse_rstats(line)
-        return {"rstats": rstats}
 
-    if re.search("traversed", line):
-        ntails =\
-            int(line.split(" tails traversed to find tip")[0].split('- ')[1])
-        return {"tailsTraversed": ntails}
-
-    # if re.search("Latest SOLID milestone index changed", line):
-    #     solid_ms_index = int(line.split("#")[2])
-    #     return {"solidMilestoneChange": solid_ms_index}
-
-    if re.search("#Solid/NonSolid", line):
-        solid, non_solid = \
-            [int(i) for i in line.split("#Solid/NonSolid: ")[1].split('/')]
-        return {"solid/nonSolid": (solid, non_solid)}
-
-    if re.search("Latest milestone has changed", line):
-        latest_ms_index = int(line.split("#")[2])
-        return {"milestoneChange": latest_ms_index}
-
-    if re.search("[generating solid entry points]: 100.00%", line):#snapshot
-        return {"snapShot": 1}
-
-    if re.search("DNS Checker", line):
-        return {"dnsCheck": 1}
-
-    if re.search("balance is not consistent", line):
-        if re.search("Validation failed:", line):
-            #print(line)
-            return {"validationFailure": 1}
-
-    if re.search("Invalid transaction timestamp", line):
-        return {"validationFailure": 1}
-
-    if re.search("Sync check = ", line):
-        sync_check = (line.split("Sync check = ")[-1])
-        return {"syncCheck": sync_check}
-
+def match_and_set_node_metric(node_name, line):
+    result = match_api_request(node_name, line)
+    if result:
+        return result
+    else:
+        result = match_x_class(node_name, line)
+        if result:
+            return result
     return None
 
-def inc_api_metric(node_id, api_request):
-    node_metrics[node_id][api_request].inc()
-
-
-def set_rstat_metrics(node_id, data):
-    set_class_metric(
-        node_id, 'toProcess', data['rstats'][0]
-    )
-    set_class_metric(
-        node_id, 'toBroadcast', data['rstats'][1]
-    )
-    set_class_metric(
-        node_id, 'toRequest', data['rstats'][2]
-    )
-    set_class_metric(
-        node_id, 'toReply', data['rstats'][3]
-    )
-    set_class_metric(
-        node_id, 'totalTransactions', data['rstats'][4]
-    )
-
-def set_class_metric(node_id, metric, val):
-    if metric in node_metrics[node_id]:
-        node_metrics[node_id][metric].set(val)
-    else:
-        node_metrics[node_id][metric] = \
-            Gauge('{}_{}'.format(node_id, metric),
-                'The values of the metric {} for node {}'.format(
-                    metric, node_id
-                )
-            )
-
-KNOWN_NODES = []
-node_metrics = {}
-
-def update_node_metrics(node_id):
-    if node_id not in KNOWN_NODES and len(KNOWN_NODES) < 10:
-        KNOWN_NODES.append(node_id)
-        node_metrics.update(
-            construct_metrics(
-                node_id,
-                api_request_metrics,
-                x_class_metrics
-            )
-        )
 
 def export_metrics(exporter_queue):
     while True:
         line = exporter_queue.get(timeout=10000.0)
         if line:
-            node = re.match(node_id_pattern, line)
+            # we match the start of the line for snake_case node_names
+            node = re.match(NODE_NAME_PATTERN, line)
+
             if node:
-                node_id = node.group(0)
-                update_node_metrics(node_id)
-                api_request = match_for_api_request(api_request_metrics, line)
-                if api_request:
-                    inc_api_metric(node_id, api_request)
-                    logger.info("Incremented {} for {}".format(api_request, node_id))
-                    continue
-                data = match_class_outside_api(line)
-                if data:
-                    if data.get("rstats"):
-                        set_rstat_metrics(node_id, data)
-                        logger.info("New rstats for node {}: {}".format(
-                            node_id, data['rstats'])
+                node_name = node.group(0)
+                # does nothing if we already are tracking
+                start_tracking_nodes_metrics(node_name)
+
+                result = match_and_set_node_metric(node_name, line)
+                if result:
+                    if result[1] == 1:
+                        log.info("Incremented {} for {}".format(
+                            result[0], node_name)
                         )
-                        continue
-                    if data.get("solid/nonSolid"):
-                        set_class_metric(
-                            node_id, 'solid', data['solid/nonSolid'][0]
-                        )
-                        set_class_metric(
-                            node_id, 'nonSolid', data['solid/nonSolid'][1]
-                        )
-                        logger.info(
-                            "New solid/nonsolid report for {}: {}".format(
-                                node_id, data['solid/nonSolid']
-                            )
-                        )
-                        continue
                     else:
-                        data = data.popitem()
-                        set_class_metric(
-                            node_id, data[0], data[1]
-                        )
-                        logger.info("New metric report {} for {}".format(
-                            node_id, data
-                            )
+                        log.info("Set {} for {} to {}".format(
+                            result[0], node_name, result[1])
                         )
 
-# class NewMetricCache:
-#     def __init__(self):
-#         self.cache = {}#{node_id: {data[0], data[1]}}
-#     def new_record(self, node):
-#         self.cache[node] = {}
 
 def trail_log(exporter_queue, fname):
     with open(fname, 'r') as fname:
