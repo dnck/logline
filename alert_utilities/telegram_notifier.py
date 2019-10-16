@@ -7,14 +7,13 @@ PY_DIRNAME, PY_FILENAME = os.path.split(os.path.abspath(__file__))
 ENV_FILE = os.path.join(PY_DIRNAME, ".env")
 
 
-print(ENV_FILE)
-
 def get_env():
     with open(ENV_FILE, "r") as fname:
         env = {}
         for line in fname:
-            if len(line):
-                env[line.split("=")[0].strip()] = line.split("=")[1].strip()
+            if "TELEGRAM" in line:
+                split_line = line.split("=")
+                env[split_line[0].strip()] = split_line[1].strip()
         return env
 
 

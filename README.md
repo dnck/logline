@@ -2,7 +2,7 @@
 
 Ship your log lines from a file via UDP packets to a server accepting log lines:
 ```
-python3 ship_log.py -fname ~/logs/logFile.log -host ip.com -port 5222  
+python3 ship_log.py /home/ubuntu/data/logs -host send.here.net -port 5222 -node_name relayer1 &
 ```
 
 Ship your log lines from a pipe via UDP packets to a server accepting log lines. From the directory of your docker-compose.yml file,
