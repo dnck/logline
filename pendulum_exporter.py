@@ -17,7 +17,7 @@ NODE_METRICS = {}
 KNOWN_NODES = []
 
 IO_OPTIONS = {
-    'stdout_only': True, 'level': 'info',
+    'stdout_only': False, 'level': 'info',
     'parentdir': './',
     'log_filename': 'pendulum_export.log'
 }
@@ -214,7 +214,7 @@ def export_metrics(exporter_queue):
 
                 result = match_and_set_node_metric(node_name, line)
                 if result:
-                    if result[1] == 1:
+                    if result[1] == 1 and not (result[0]=="syncCheck"):
                         log.info("Incremented {} for {}".format(
                             result[0], node_name)
                         )
@@ -271,3 +271,4 @@ if __name__ == '__main__':
 
     send_to_queue_thread.start()
     export_metrics_thread.start()
+
