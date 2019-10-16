@@ -7,8 +7,6 @@ import os
 import sys
 import datetime
 
-from dotenv import load_dotenv
-
 from alert_utilities import telegram_notifier
 
 if sys.version_info.major > 2:
@@ -16,17 +14,6 @@ if sys.version_info.major > 2:
 else:
     from Queue import Queue
 
-
-
-PY_DIRNAME, PY_FILENAME = os.path.split(os.path.abspath(__file__))
-PROJECT_ROOT_DIR = os.path.dirname(PY_DIRNAME)
-ENV_FILE = os.path.join(PROJECT_ROOT_DIR, ".env")
-load_dotenv(dotenv_path=ENV_FILE)
-
-os.environ.get("LOG_DIRECTORY")
-os.environ.get("RECEIVER_HOST")
-os.environ.get("RECEIVER_PORT")
-os.environ.get("NODE_NAME")
 
 notifier = telegram_notifier.NotificationHandler()
 
@@ -74,25 +61,25 @@ def dtobj_from_str(time_string):
 
 if __name__ == '__main__':
 
-    # PARSER = argparse.ArgumentParser(
-    #     description='Log line shipper.'
-    # )
-    # PARSER.add_argument('directory',
-    #     metavar='directory', type=str, default='',
-    #     help='Full path and filename of the log to tail and ship to server'
-    # )
-    # PARSER.add_argument('-host',
-    #     metavar='port', type=str, default='127.0.0.1',
-    #     help='The log server public IP where we ship to'
-    # )
-    # PARSER.add_argument('-port',
-    #     metavar='port', type=int, default=5222,
-    #     help='The log server port where we ship to'
-    # )
-    # PARSER.add_argument('-node_name',
-    #     metavar='node_name', type=str, default='',
-    #     help='The name of the node to prepend to the log lines'
-    # )
+    PARSER = argparse.ArgumentParser(
+        description='Log line shipper.'
+    )
+    PARSER.add_argument('directory',
+        metavar='directory', type=str, default='',
+        help='Full path and filename of the log to tail and ship to server'
+    )
+    PARSER.add_argument('-host',
+        metavar='port', type=str, default='127.0.0.1',
+        help='The log server public IP where we ship to'
+    )
+    PARSER.add_argument('-port',
+        metavar='port', type=int, default=5222,
+        help='The log server port where we ship to'
+    )
+    PARSER.add_argument('-node_name',
+        metavar='node_name', type=str, default='',
+        help='The name of the node to prepend to the log lines'
+    )
 
 
     args = PARSER.parse_args()

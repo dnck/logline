@@ -1,3 +1,4 @@
+import os
 import requests
 from dotenv import load_dotenv
 
@@ -5,6 +6,7 @@ from dotenv import load_dotenv
 PY_DIRNAME, PY_FILENAME = os.path.split(os.path.abspath(__file__))
 ENV_FILE = os.path.join(PY_DIRNAME, ".env")
 load_dotenv(dotenv_path=ENV_FILE)
+
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
