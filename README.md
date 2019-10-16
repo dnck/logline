@@ -24,3 +24,10 @@ To receive log lines, if you are behind NAT, make sure you have port forwarding 
 On Ubuntu, this can be configured by investigating ufw.
 
 More robust architectures can be built on top of this pattern.
+
+
+# Run docker_ship_log.py
+```
+docker build -f shipper.Dockerfile -t py_log_shipper .
+docker run --name py_log_shipper -v LOG_DIRECTORY -d py_log_shipper
+```

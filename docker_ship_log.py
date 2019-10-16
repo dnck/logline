@@ -17,16 +17,15 @@ else:
     from Queue import Queue
 
 
-
 PY_DIRNAME, PY_FILENAME = os.path.split(os.path.abspath(__file__))
 PROJECT_ROOT_DIR = os.path.dirname(PY_DIRNAME)
 ENV_FILE = os.path.join(PROJECT_ROOT_DIR, ".env")
 load_dotenv(dotenv_path=ENV_FILE)
 
-os.environ.get("LOG_DIRECTORY")
-os.environ.get("RECEIVER_HOST")
-os.environ.get("RECEIVER_PORT")
-os.environ.get("NODE_NAME")
+LOG_DIRECTORY = os.environ.get("LOG_DIRECTORY")
+RECEIVER_HOST = os.environ.get("RECEIVER_HOST")
+RECEIVER_PORT = os.environ.get("RECEIVER_PORT")
+NODE_NAME = os.environ.get("NODE_NAME")
 
 notifier = telegram_notifier.NotificationHandler()
 
@@ -74,35 +73,12 @@ def dtobj_from_str(time_string):
 
 if __name__ == '__main__':
 
-    # PARSER = argparse.ArgumentParser(
-    #     description='Log line shipper.'
-    # )
-    # PARSER.add_argument('directory',
-    #     metavar='directory', type=str, default='',
-    #     help='Full path and filename of the log to tail and ship to server'
-    # )
-    # PARSER.add_argument('-host',
-    #     metavar='port', type=str, default='127.0.0.1',
-    #     help='The log server public IP where we ship to'
-    # )
-    # PARSER.add_argument('-port',
-    #     metavar='port', type=int, default=5222,
-    #     help='The log server port where we ship to'
-    # )
-    # PARSER.add_argument('-node_name',
-    #     metavar='node_name', type=str, default='',
-    #     help='The name of the node to prepend to the log lines'
-    # )
-
-
-    args = PARSER.parse_args()
-
     log_files = {
         dtobj_from_str(s.split("log-")[1][:19]): \
-            s for s in os.listdir(args.directory)
+            s for s in os.listdir(LOG_DIRECTORY)
     }
     sorted_log_files = sorted(list(log_files.keys()))
-    fname = os.path.join(args.directory, log_files[sorted_log_files[-1]])
+    fname = os.path.join(LOG_DIRECTORY, log_files[sorted_log_files[-1]])
 
     broadcast_queue = Queue()
 
@@ -112,7 +88,7 @@ if __name__ == '__main__':
 
     broadcast_to_receiver_thread = threading.Thread(
         target=send_datagram,
-        args = (broadcast_queue, args.host, args.port,  args.node_name,)
+        args = (broadcast_queue, RECEIVER_HOST, RECEIVER_PORT, NODE_NAME,)
     )
 
     send_to_queue_thread.start()
