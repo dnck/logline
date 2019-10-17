@@ -247,7 +247,7 @@ if __name__ == '__main__':
     ARGS = PARSER.parse_args()
 
     logger = results_manager.LogManager(level="debug", output="file",
-        filename="pendulum_export_"str(ARGS.server_port)+".log")
+        filename="pendulum_export_"+str(ARGS.server_port)+".log")
 
     exporter_queue = Queue()
 
