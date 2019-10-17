@@ -11,6 +11,7 @@ if sys.version_info.major > 2:
 else:
     from Queue import Queue
 
+SCRIPT_DIRNAME, SCRIPT_FILENAME = os.path.split(os.path.abspath(__file__))
 
 NODE_METRICS = {}
 
@@ -18,7 +19,7 @@ KNOWN_NODES = []
 
 IO_OPTIONS = {
     'stdout_only': False, 'level': 'info',
-    'parentdir': './',
+    'parentdir': SCRIPT_DIRNAME,
     'log_filename': 'pendulum_export.log'
 }
 
@@ -271,4 +272,3 @@ if __name__ == '__main__':
 
     send_to_queue_thread.start()
     export_metrics_thread.start()
-
