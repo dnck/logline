@@ -4,14 +4,13 @@ import time
 import threading
 import sys
 import re
+
 from prometheus_client import start_http_server, Gauge
 
 if sys.version_info.major > 2:
     from queue import Queue
 else:
     from Queue import Queue
-
-SCRIPT_DIRNAME, SCRIPT_FILENAME = os.path.split(os.path.abspath(__file__))
 
 NODE_METRICS = {}
 
