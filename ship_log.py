@@ -34,7 +34,7 @@ def send_datagram(broadcast_queue, host, port, node_name):
     while True:
         try:
             postdata = broadcast_queue.get(timeout=120.0)
-        except Queue.Empty:
+        except Exception:
             notifier.emit(
                 "ALERT!! {} has stopped shipping log lines!".format(node_name)
                 )
