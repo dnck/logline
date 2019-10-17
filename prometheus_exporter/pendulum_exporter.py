@@ -17,16 +17,6 @@ NODE_METRICS = {}
 
 KNOWN_NODES = []
 
-IO_OPTIONS = {
-    'stdout_only': False, 'level': 'info',
-    'parentdir': SCRIPT_DIRNAME,
-    'log_filename': 'pendulum_export.log'
-}
-
-log_manager = results_manager.ResultsManager(IO_OPTIONS)
-
-log = log_manager.logger
-
 NODE_NAME_PATTERN = re.compile(r"^[a-zA-Z0-9._]+")
 
 API_REQUEST_METRICS = [
@@ -57,7 +47,6 @@ def start_tracking_nodes_metrics(node_name):
                 X_CLASS_METRICS
             )
         )
-        log.info("Constructed new metric dictionary for {}".format(node_name))
 
 
 def construct_metrics(node_name, API_REQUEST_METRICS, X_CLASS_METRICS):
@@ -201,7 +190,7 @@ def match_and_set_node_metric(node_name, line):
     return None
 
 
-def export_metrics(exporter_queue):
+def export_metrics(exporter_queue, logger):
     while True:
         line = exporter_queue.get(timeout=10000.0)
         if line:
@@ -216,11 +205,11 @@ def export_metrics(exporter_queue):
                 result = match_and_set_node_metric(node_name, line)
                 if result:
                     if result[1] == 1 and not (result[0]=="syncCheck"):
-                        log.info("Incremented {} for {}".format(
+                        logger.info("Incremented {} for {}".format(
                             result[0], node_name)
                         )
                     else:
-                        log.info("Set {} for {} to {}".format(
+                        logger.info("Set {} for {} to {}".format(
                             result[0], node_name, result[1])
                         )
 
@@ -257,7 +246,11 @@ if __name__ == '__main__':
 
     ARGS = PARSER.parse_args()
 
+    logger = results_manager.LogManager(level="debug", output="file",
+        filename="pendulum_export_"str(ARGS.server_port)+".log")
+
     exporter_queue = Queue()
+
 
     start_http_server(ARGS.server_port)
 
@@ -267,7 +260,7 @@ if __name__ == '__main__':
 
     export_metrics_thread = threading.Thread(
         target=export_metrics,
-        args = (exporter_queue,)
+        args = (exporter_queue, logger,)
     )
 
     send_to_queue_thread.start()

@@ -1,76 +1,105 @@
-# -*- coding: utf-8 *-*
+# -*- coding: utf-8 -*-
 """
-Module for logging and saving
+This module is a simple manager for the standard Python logging module. It's
+primary contribution is its ability to create a default var/log directory
+for storing the log file when constructed with Arg output='file'
+
+Usage:
+    from log_manager import LogManager
+
+
+    file_logger = LogManager(level="debug", output="file") # logs to file
+    stdout_logger = LogManager(level="debug", output="stdout") # logs to stdout
+
+    file_logger.log.info("Hello world!")
+
 """
-from datetime import datetime
-import json
-import uuid
-import os
 import logging
+import os
 import sys
 
-LEVELS = {'info': logging.INFO, 'debug': logging.DEBUG}
+LEVELS = {"notset": logging.NOTSET, "debug": logging.DEBUG,
+          "info": logging.INFO, "warning": logging.WARNING,
+          "error": logging.ERROR, "critical": logging.CRITICAL
+          }
 
-class ResultsManager:
+class LogManager:
     """
-    If options are provided, then a log file is created and saved under:
-        parentdir/date/uuid/log_filename
+    A simple class for managing logging for the application.
+    """
 
-    The date and uuid is internally generated.
-    """
-    def __init__(self,
-        options={
-            'stdout_only': True,
-            'level': 'info',
-            'parentdir': str,
-            'log_filename': str
-        }
-    ):
-        self.logger = logging
-        self.level = LEVELS[options['level']]
-        if not options['stdout_only']:
-            self._parentdir = os.path.normpath(options['parentdir'])
-            self._date = datetime.now().strftime("%Y-%m-%d")
-            self._uuid = str(uuid.uuid4())
-            self._results_dir = os.path.join(self._parentdir, "results")
-            self._dated_results_dir = os.path.join(
-                self._results_dir, self._date
+    PY_DIRNAME, PY_FILENAME = os.path.split(os.path.abspath(__file__))
+
+    def __init__(self, level="debug", output="stdout",
+                 filename="pendulum_export.log"
+                ):
+        """
+        Args:
+            level (str): All of the default log levels from the
+                logging module are supported.
+            output (str): Either 'stdout' or 'file'. If 'file', then messages
+                are directed to the var/log/py_exchange_rates.log file.
+        """
+        self.log = logging
+        self.level = LEVELS[level]
+
+        if output == "file":
+            self._root_dir = os.path.dirname(self.PY_DIRNAME)
+            self._var_dir = os.path.join(self._root_dir, "var")
+            mkdir_if_not_exists(self._var_dir)
+
+            self._log_dir = os.path.join(self._var_dir, "log")
+            mkdir_if_not_exists(self._log_dir)
+
+            self._log_file_name = os.path.join(
+                ".", self._log_dir, filename
             )
-            self._unique_dated_results_dir = os.path.join(
-                self._dated_results_dir, self._uuid
-            )
-            mkdir_if_not_exists(self._results_dir)
-            mkdir_if_not_exists(self._dated_results_dir)
-            mkdir_if_not_exists(self._unique_dated_results_dir)
-            self._log_file = os.path.join(
-                self._unique_dated_results_dir, options['log_filename']
-            )
-            self.configure_logger(self.level, self._log_file)
+            self.configure_logger(self._log_file_name)
         else:
-            self.configure_logger(self.level, False)
+            self.configure_logger()
 
-    def configure_logger(self, level='info', filename=None):
+    def configure_logger(self, filename=None):
+        """A docstring"""
         if filename:
-            self.logger.basicConfig(
-                filename=self._log_file,
+            self.log.basicConfig(
+                filename=self._log_file_name,
                 level=self.level,
                 format="%(asctime)s - %(levelname)s - %(message)s",
                 datefmt="%m/%d/%Y %I:%M:%S %p",
             )
         else:
-            self.logger.basicConfig(
+            self.log.basicConfig(
                 stream=sys.stdout,
                 level=self.level,
                 format="%(asctime)s - %(levelname)s - %(message)s",
                 datefmt="%m/%d/%Y %I:%M:%S %p",
             )
 
+    def info(self, msg):
+        """Emits a msg at the info level."""
+        self.log.info(msg)
+
+    def debug(self, msg):
+        """Emits a msg at the debug level."""
+        self.log.debug(msg)
+
+    def warning(self, msg):
+        """Emits a msg at the warning level."""
+        self.log.warning(msg)
+
+    def error(self, msg):
+        """Emits a msg at the error level."""
+        self.log.error(msg)
+
+    def critical(self, msg):
+        """Emits a msg at the critical level."""
+        self.log.critical(msg)
+
+    def exception(self, msg):
+        """Emits a msg and the error trace which caused the exception."""
+        self.log.exception(msg)
+
 def mkdir_if_not_exists(dirname):
+    """Make a directory if it does not exist."""
     if not os.path.isdir(dirname):
         os.mkdir(dirname)
-
-def write_dict_to_json(filename, data):
-    """Write an in-memory Python dictionary to a formatted .json file."""
-    filename = os.path.normpath(filename)
-    with open(filename, "w") as file_obj:
-        json.dump(data, file_obj)
