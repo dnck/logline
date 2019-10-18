@@ -2,3 +2,5 @@ __pycache__/
 /logs
 .env
 Makefile
+*.ipynb
+.ipynb_checkpoints

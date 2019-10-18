@@ -9,54 +9,95 @@ import datetime
 
 from alert_utilities import telegram_notifier
 
+from prometheus_exporter import results_manager
+
 if sys.version_info.major > 2:
     from queue import Queue
 else:
     from Queue import Queue
 
 
-notifier = telegram_notifier.NotificationHandler()
+class LogShipper:
+
+    def __init__(self, log_dir, host, port, node_name):
+
+        self.logger = results_manager.LogManager(level="debug", output="file",
+                                                 filename="shipper.log"
+                                                )
+        self.notifier = telegram_notifier.NotificationHandler()
+        self.host = host
+        self.port = port
+        self.node_name = "{} | ".format(node_name)
+        self.broadcast_queue = Queue()
+        self.log_dir = log_dir
+        self.log_file = self.observe_dir()
+        self.new_log_file = self.observe_dir()
 
 
-def trail_log(broadcast_queue, fname):
-    with open(fname, 'r') as fname:
-        fname.seek(0,2) # Go to the end of the file
+    def trail_log(self):
+        with open(self.log_file, 'r') as fname:
+            fname.seek(0,2) # Go to the end of the file
+            while True:
+                line = fname.readline()
+                if not line:
+                    self.new_log_file = self.observe_dir()
+                    if self.log_file  == self.new_log_file:
+                        time.sleep(0.1) # Sleep briefly
+                        continue
+                    else:
+                        # the thread will stop, and we need to restart it
+                        self.log_file = self.new_log_file
+                        return None
+                line = line.rstrip()
+                self.broadcast_queue.put(line)
+
+
+    def send_datagram(self):
         while True:
-            line = fname.readline()
-            if not line:
-                time.sleep(0.1) # Sleep briefly
-                continue
-            line = line.rstrip()
-            broadcast_queue.put(line)
+            try:
+                postdata = self.broadcast_queue.get(timeout=120.0)
+            except Exception:
+                self.logger.debug(
+                    "There were no lines in the broadcast queue!"
+                    )
+                self.notifier.emit(
+                    "ALERT!! {} has stopped shipping log lines!".format(self.node_name.replace(" | ", ""))
+                    )
+                trail_log_thread = threading.Thread(target=self.trail_log)
+                trail_log_thread.start()
+            if postdata:
+                self._send_datagram(postdata)
 
 
-def send_datagram(broadcast_queue, host, port, node_name):
-    while True:
-        try:
-            postdata = broadcast_queue.get(timeout=120.0)
-        except Exception:
-            notifier.emit(
-                "ALERT!! {} has stopped shipping log lines!".format(node_name)
-                )
-        if postdata:
-            _send_datagram(host, port, postdata, node_name)
+    def _send_datagram(self, postdata):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+        sock.sendto(self.encode_logline(postdata), (self.host, self.port))
+
+    def encode_logline(self, postdata):
+        return json.dumps(self.node_name+postdata).encode()
 
 
-def _send_datagram(host, port, postdata, node_name):
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-    sock.sendto(
-        json.dumps(node_name+" | "+postdata).encode(),
-        (host, port)
-    )
+    def observe_dir(self):
+        """
+        Watch the log directory for changes.
 
+        If there's a new log file, stop shipping from the old log,
+        and start shipping from the new log.
 
-def dtobj_from_str(time_string):
-    """Get a datetime object from an appropriately formatted string."""
-    dt_obj = datetime.datetime.strptime(
-        time_string, "%Y-%m-%d-%H-%M-%S"
-    )
-    return dt_obj
+        If there's no change, don't do anything.
+        """
+        # the current log filenames
+        current_log_files = [
+            os.path.join(os.path.abspath(self.log_dir), i)
+            for i in os.listdir(self.log_dir)
+            if i.endswith(".log")
+        ]
+        # the modification times of the logs
+        f_mod_times = {os.stat(i).st_mtime: i for i in current_log_files}
+        # newest file
+        new_file_key = max(list(f_mod_times.keys()))
+        return f_mod_times[new_file_key]
 
 
 if __name__ == '__main__':
@@ -64,8 +105,8 @@ if __name__ == '__main__':
     PARSER = argparse.ArgumentParser(
         description='Log line shipper.'
     )
-    PARSER.add_argument('directory',
-        metavar='directory', type=str, default='',
+    PARSER.add_argument('log_dir',
+        metavar='log_dir', type=str, default='',
         help='Full path and filename of the log to tail and ship to server'
     )
     PARSER.add_argument('-host',
@@ -81,27 +122,14 @@ if __name__ == '__main__':
         help='The name of the node to prepend to the log lines'
     )
 
+    ARGS = PARSER.parse_args()
 
-    args = PARSER.parse_args()
+    shipper = LogShipper(ARGS.log_dir, ARGS.host, ARGS.port, ARGS.node_name)
 
-    log_files = {
-        dtobj_from_str(s.split("log-")[1][:19]): \
-            s for s in os.listdir(args.directory)
-    }
-    sorted_log_files = sorted(list(log_files.keys()))
-    fname = os.path.join(args.directory, log_files[sorted_log_files[-1]])
+    trail_log_thread = threading.Thread(target=shipper.trail_log)
 
-    broadcast_queue = Queue()
+    send_log_line_thread = threading.Thread(target=shipper.send_datagram)
 
-    send_to_queue_thread = threading.Thread(
-        target=trail_log, args = (broadcast_queue, fname,)
-    )
+    trail_log_thread.start()
 
-    broadcast_to_receiver_thread = threading.Thread(
-        target=send_datagram,
-        args = (broadcast_queue, args.host, args.port,  args.node_name,)
-    )
-
-    send_to_queue_thread.start()
-
-    broadcast_to_receiver_thread.start()
+    send_log_line_thread.start()
