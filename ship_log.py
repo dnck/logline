@@ -35,6 +35,9 @@ class LogShipper:
 
 
     def trail_log(self):
+        self.notifier.emit(
+            "INFO: {} has started shipping log lines.".format(self.node_name.replace(" | ", ""))
+            )
         with open(self.log_file, 'r') as fname:
             fname.seek(0,2) # Go to the end of the file
             while True:
@@ -61,7 +64,7 @@ class LogShipper:
                     "There were no lines in the broadcast queue!"
                     )
                 self.notifier.emit(
-                    "ALERT!! {} has stopped shipping log lines!".format(self.node_name.replace(" | ", ""))
+                    "ALERT! {} has stopped shipping log lines!".format(self.node_name.replace(" | ", ""))
                     )
                 trail_log_thread = threading.Thread(target=self.trail_log)
                 trail_log_thread.start()
