@@ -1,3 +1,7 @@
+# -*- coding: utf-8 *-*
+"""
+A log shipper that tails a file and sends new lines to the log server.
+"""
 import argparse
 import time
 import threading

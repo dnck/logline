@@ -1,3 +1,7 @@
+# -*- coding: utf-8 *-*
+"""
+A simple UDP server that writes loglines to file. You should firewall this guy.
+"""
 import argparse
 import socket
 import json

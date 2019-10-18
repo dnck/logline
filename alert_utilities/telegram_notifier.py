@@ -1,6 +1,10 @@
+# -*- coding: utf-8 *-*
+"""
+This is the summary line.
+"""
 import os
 import requests
-# from dotenv import load_dotenv
+# from dotenv import load_dotenv # python 3.7
 
 
 PY_DIRNAME, PY_FILENAME = os.path.split(os.path.abspath(__file__))

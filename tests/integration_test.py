@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Module description
+You were probably hoping to see more here. Sorry.
 """
 from context import telegram_notifier
 

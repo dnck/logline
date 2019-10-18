@@ -1,3 +1,8 @@
+# -*- coding: utf-8 *-*
+"""
+Ingest log lines them from standard input and
+send them over to the central log server.
+"""
 import argparse
 import time
 import threading

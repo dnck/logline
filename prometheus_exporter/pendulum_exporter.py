@@ -1,3 +1,8 @@
+# -*- coding: utf-8 *-*
+"""
+A Prometheues exporter for the Helix Network pendulum
+node application logs.
+"""
 import argparse
 import results_manager
 import time
