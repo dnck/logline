@@ -56,6 +56,7 @@ class LogShipper:
                     else:
                         sys.exit(1)
                 else:
+                    polls = 0 
                     line = line.rstrip()
                     self.broadcast_queue.put(line)
                     time.sleep(0.1)
