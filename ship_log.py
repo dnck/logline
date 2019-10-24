@@ -27,7 +27,8 @@ else:
 class LogShipper:
     def __init__(self, log_dir, host, port, node_name):
 
-        self.logger = results_manager.LogManager(level="debug", output="file")
+        self.logger = results_manager.LogManager(level="debug", output="file",
+                                                 filename="shipper.log")
         self.notifier = telegram_notifier.NotificationHandler()
         self.host = host
         self.port = port
