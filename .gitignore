@@ -4,3 +4,4 @@ __pycache__/
 Makefile
 *.ipynb
 .ipynb_checkpoints
+/var

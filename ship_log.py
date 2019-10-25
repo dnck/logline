@@ -140,10 +140,9 @@ if __name__ == "__main__":
 
     PARSER = argparse.ArgumentParser(description="Log line shipper.")
     PARSER.add_argument(
-        "-log_dir",
+        "log_dir",
         metavar="log_dir",
         type=str,
-        default="/var/log",
         help="Full path and filename of the log to tail and ship to server",
     )
     PARSER.add_argument(
