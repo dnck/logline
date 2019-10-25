@@ -3,87 +3,75 @@
 A log shipper that tails a file and sends new lines to the log server.
 """
 import argparse
-
-# import copy
-import time
-import sys
 import threading
 import socket
-import json
 import os
+import time
 import sys
-import datetime
+import json
 
-from alert_utilities import telegram_notifier
+from queue import Queue
 
 from prometheus_exporter import results_manager
 
-if sys.version_info.major > 2:
-    from queue import Queue
-else:
-    from Queue import Queue
+from alert_utilities import telegram_notifier
 
 
-class LogShipper:
-    def __init__(self, log_dir, host, port, node_name):
+BROADCAST_QUEUE = Queue()
+STOP_SIGNAL = Queue()
 
-        self.logger = results_manager.LogManager(level="debug", output="file",
-                                                 filename="shipper.log")
-        self.notifier = telegram_notifier.NotificationHandler()
-        self.host = host
-        self.port = port
-        self.node_name = "{} | ".format(node_name)
-        self.broadcast_queue = Queue()
+logger = results_manager.LogManager(level="debug", output="file",
+                                         filename="shipper.log")
+
+
+class LogTailer(threading.Thread):
+    """
+    Class to manage a thread that tails the newest log file in the log dir.
+    If the log file changes, then this class will grab a hold of it, and
+    start tailing it, and sending the lines into a shared queue.
+    The threaded sister class LineShipper grabs messages from the shared queue
+    and sends them to the central server. If the LineShipper puts a message in
+    the shared STOP_SIGNAL queue, then this class (LogTailer) will shut down.
+    A notification of the shutdown is sent to telegram.
+    """
+    def __init__(self, name, thread_id, log_dir):
+        threading.Thread.__init__(self)
+        self.name = name
+        self.thread_id = thread_id
         self.log_dir = log_dir
-        self.log_file = self.observe_dir()
 
-    def trail_log(self):
-        self.notifier.emit(
-            "{} started shipping lines from file {}".format(
-                self.node_name.replace(" | ", ""), self.log_file
-            )
-        )
-        polls = 0
-        with open(self.log_file, "r") as fname:
-            fname.seek(0, 2)  # Go to the end of the file
-            while True:
-                line = fname.readline()
-                if not line:
-                    time.sleep(1.0)
-                    polls += 1
-                    if polls < 10:
+    def run(self):
+        """
+        This method implements the run logic of the thread.
+        """
+        logger.info("Tailing logfile.")
+        fname, LOG_FILE_0 = self.tail()
+        sleep_time = 1.0
+        while True:
+            line = fname.readline()
+            if not line:
+                # check for new log file
+                fname, LOG_FILE_1 = self.tail()
+                if LOG_FILE_0 != LOG_FILE_1:
+                    LOG_FILE_0 = LOG_FILE_1
+                else: # sleep for a bit if there was not a log file change
+                    time.sleep(sleep_time)
+                    if STOP_SIGNAL.empty():
                         continue
                     else:
+                        logger.info("Stopped tailing.")
                         sys.exit(1)
-                else:
-                    polls = 0 
-                    line = line.rstrip()
-                    self.broadcast_queue.put(line)
-                    time.sleep(0.1)
+            else:
+                line = line.rstrip()
+                BROADCAST_QUEUE.put(line)
 
-    def send_datagram(self):
-        while True:
-            try:
-                postdata = self.broadcast_queue.get(timeout=10.0)
-                if postdata:
-                    self._send_datagram(postdata)
-            except Exception:
-                self.notifier.emit(
-                    "ALERT! {} stopped shipping log lines!".format(
-                        self.node_name.replace(" | ", "")
-                    )
-                )
-                sys.exit(1)
+    def tail(self):
+        LOG_FILE = self.get_log_file()
+        fname = open(LOG_FILE, "r")
+        fname.seek(0, 2)  # Go to the end of the file
+        return fname, LOG_FILE
 
-    def _send_datagram(self, postdata):
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-        sock.sendto(self.encode_logline(postdata), (self.host, self.port))
-
-    def encode_logline(self, postdata):
-        return json.dumps(self.node_name + postdata).encode()
-
-    def observe_dir(self):
+    def get_log_file(self):
         """
         Watch the log directory for changes.
 
@@ -105,18 +93,57 @@ class LogShipper:
             new_file_key = max(list(f_mod_times.keys()))
             return f_mod_times[new_file_key]
         else:
-            self.logger.debug("No log files found. Shutting down.")
-            sys.exit(1)  # will throw a horrible error when the file isn't there
+            logger.info("No log files found. Shutting down.")
+        sys.exit(1)  # will throw a horrible error when the file isn't there
+
+
+class LineShipper(threading.Thread):
+    """
+    Class to handle sending loglines from the shared queue to the server.
+    If no lines are in the queue for a default of 1 hour, then this threaded
+    class will shutdown and send a shutdown signal to its sister class,
+    the LogTailer. Loglines from the queue are appended with a identifier,
+    node_name like so, 'node_node | LOGLINE'.
+    """
+    def __init__(self, name, thread_id, host, port):
+        threading.Thread.__init__(self)
+        self.name = name
+        self.thread_id = thread_id
+        self.host = host
+        self.port = port
+        self.node_name = "{} | ".format(name)
+
+    def run(self):
+        logger.info("Shipping loglines.")
+        while True:
+            try:
+                postdata = BROADCAST_QUEUE.get(timeout=60*60)
+                if postdata:
+                    self._send_datagram(postdata)
+            except Exception as e:
+                print(e)
+                STOP_SIGNAL.put(True)
+                logger.info("Stopped shipping.")
+                sys.exit(1)
+
+    def _send_datagram(self, postdata):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+        sock.sendto(self._encode_logline(postdata), (self.host, self.port))
+        # print("Sent data {}".format(self._encode_logline(postdata)))
+
+    def _encode_logline(self, postdata):
+        return json.dumps(self.node_name + postdata).encode()
 
 
 if __name__ == "__main__":
 
     PARSER = argparse.ArgumentParser(description="Log line shipper.")
     PARSER.add_argument(
-        "log_dir",
+        "-log_dir",
         metavar="log_dir",
         type=str,
-        default="",
+        default="/var/log",
         help="Full path and filename of the log to tail and ship to server",
     )
     PARSER.add_argument(
@@ -137,18 +164,26 @@ if __name__ == "__main__":
         "-node_name",
         metavar="node_name",
         type=str,
-        default="",
+        default="default",
         help="The name of the node to prepend to the log lines",
     )
 
     ARGS = PARSER.parse_args()
+    NOTIFIER = telegram_notifier.NotificationHandler()
 
-    shipper = LogShipper(ARGS.log_dir, ARGS.host, ARGS.port, ARGS.node_name)
+    # Create new threads
+    TAIL = LogTailer("LogTailer", 1, ARGS.log_dir)
+    SHIP = LineShipper(ARGS.node_name, 2, ARGS.host, ARGS.port)
 
-    trail_log_thread = threading.Thread(target=shipper.trail_log)
+    # Start new Threads
+    TAIL.start()
+    SHIP.start()
 
-    send_log_line_thread = threading.Thread(target=shipper.send_datagram)
-
-    trail_log_thread.start()
-
-    send_log_line_thread.start()
+    SHIP.join()
+    #logger.info("Finished ship thread.")
+    TAIL.join()
+    #logger.info("Finished tail thread.")
+    #logger.info("Exiting program.")
+    NOTIFIER.emit(
+        "ALERT! {} stopped shipping log lines!".format(ARGS.node_name)
+    )
