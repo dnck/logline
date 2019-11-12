@@ -17,6 +17,7 @@ if sys.version_info.major > 2:
 else:
     from Queue import Queue
 
+
 NODE_METRICS = {}
 
 KNOWN_NODES = []
@@ -38,19 +39,24 @@ X_CLASS_METRICS = [
     '{}_totalTransactions', '{}_tailsTraversed', '{}_solid', '{}_nonSolid',
     '{}_dnsCheck', '{}_milestoneValid', '{}_solidMilestoneChange',
     '{}_syncCheck', '{}_nodeStoredTx', '{}_apiStoredTx',
-    '{}_invalidTimestamp', "{}_inconsistentBalance"
+    '{}_invalidTimestamp', "{}_inconsistentBalance", "{}_broadcastedTx",
+    "{}_receivedTxvm"
 ]
 
 def start_tracking_nodes_metrics(node_name):
-    if node_name not in KNOWN_NODES and len(KNOWN_NODES) < 20:
-        KNOWN_NODES.append(node_name)
-        NODE_METRICS.update(
-            construct_metrics(
-                node_name,
-                API_REQUEST_METRICS,
-                X_CLASS_METRICS
+    try:
+        if node_name not in KNOWN_NODES and len(KNOWN_NODES) < 20:
+            KNOWN_NODES.append(node_name)
+            NODE_METRICS.update(
+                construct_metrics(
+                    node_name,
+                    API_REQUEST_METRICS,
+                    X_CLASS_METRICS
+                )
             )
-        )
+    except:
+        logger.exception("start_tracking_nodes_metrics error:")
+        sys.exit(1)
 
 
 def construct_metrics(node_name, API_REQUEST_METRICS, X_CLASS_METRICS):
@@ -64,131 +70,218 @@ def construct_metrics(node_name, API_REQUEST_METRICS, X_CLASS_METRICS):
         }
     }
     """
-    metrics = {
-        node_name: {
-            metric[3:]: Gauge(metric.format(node_name), 'api metrics')
-                for metric in API_REQUEST_METRICS
+    try:
+        metrics = {
+            node_name: {
+                metric[3:]: Gauge(metric.format(node_name), 'api metrics')
+                    for metric in API_REQUEST_METRICS
+            }
         }
-    }
-    for metric in X_CLASS_METRICS:
-        metrics[node_name].update(
-            {metric[3:]: Gauge(metric.format(node_name), 'class metrics')}
-        )
+    except:
+        logger.exception("construct_metrics error A:")
+    try:
+        for metric in X_CLASS_METRICS:
+            metrics[node_name].update(
+                {metric[3:]: Gauge(metric.format(node_name), 'class metrics')}
+            )
+    except:
+        logger.exception("construct_metrics error B:")
     return metrics
 
 
 def match_api_request(node_name, line):
-    for metric in API_REQUEST_METRICS:
-        if re.search(metric[3:], line):
-            inc_class_metric(node_name, metric[3:])
-            return (metric[3:], 1)
+    try:
+        for metric in API_REQUEST_METRICS:
+            if re.search(metric[3:], line):
+                inc_class_metric(node_name, metric[3:])
+                return (metric[3:], 1)
+    except:
+        logger.exception("match_api_request error:")
     return None
 
 
 def match_x_class(node_name, line):
-    if re.search("API:602 - Stored_txhash", line):
-        inc_class_metric(node_name, "apiStoredTx")
-        return ("apiStoredTx", 1)
+    try:
+        if re.search("Stored_txhash", line):
+            if re.search("API"):
+                inc_class_metric(node_name, "apiStoredTx")
+                return ("apiStoredTx", 1)
+            else:
+                inc_class_metric(node_name, "nodeStoredTx")
+                return ("nodeStoredTx", 1)
+    except:
+        logger.exception("error:")
 
-    if re.search("Node:474 - Stored_txhash", line):
-        inc_class_metric(node_name, "nodeStoredTx")
-        return ("nodeStoredTx", 1)
+    try:
+        if re.search("totalTransactions", line):
+            rstats = set_rstat_metrics(node_name, line)
+            return ("rstats", rstats)
+    except:
+        logger.exception("error:")
 
-    if re.search("totalTransactions", line):
-        rstats = set_rstat_metrics(node_name, line)
-        return ("rstats", rstats)
+    try:
+        if re.search("Broadcasted_txhash"):
+            inc_class_metric(node_name, "broadcastedTx")
+            return ("broadcastedTx", 1)
+    except:
+        logger.exception("error:")
 
-    if re.search("traversed", line):
-        ntails =\
-            int(line.split(" tails traversed to find tip")[0].split('- ')[1])
-        set_class_metric(node_name, "tailsTraversed", ntails)
-        return ("tailsTraversed", 1)
+    try:
+        if re.search("Received_txvm"):
+            inc_class_metric(node_name, "receivedTxvm")
+            return ("receivedTxvm", 1)
+    except:
+        logger.exception("error:")
 
-    if re.search("#Solid/NonSolid", line):
-        solid, non_solid = \
-            [int(i) for i in line.split("#Solid/NonSolid: ")[1].split('/')]
-        set_class_metric(node_name, 'solid', solid)
-        set_class_metric(node_name, 'nonSolid', non_solid)
-        return ("Solid/NonSolid", (solid, non_solid))
 
-    if re.search("DEBUG MilestoneTrackerImpl:391 - Milestone ", line):
-        if re.search("VALID", line):
-            inc_class_metric(node_name, "milestoneValid")
-            return ("milestoneValid", 1)
-        return None
+    try:
+        if re.search("traversed", line):
+            ntails =\
+                int(line.split(" tails traversed to find tip")[0].split('- ')[1])
+            set_class_metric(node_name, "tailsTraversed", ntails)
+            return ("tailsTraversed", 1)
+    except:
+        logger.exception("error:")
 
-    if re.search("[generating solid entry points]: 100.00%", line):#snapshot
-        inc_class_metric(node_name, "snapShot")
-        return ("snapShot", 1)
+    try:
+        if re.search("#Solid/NonSolid", line):
+            solid, non_solid = \
+                [int(i) for i in line.split("#Solid/NonSolid: ")[1].split('/')]
+            set_class_metric(node_name, 'solid', solid)
+            set_class_metric(node_name, 'nonSolid', non_solid)
+            return ("Solid/NonSolid", (solid, non_solid))
+    except:
+        logger.exception("error:")
 
-    if re.search("DNS Checker", line):
-        inc_class_metric(node_name, "dnsCheck")
-        return ("dnsCheck", 1)
+    try:
+        if re.search("DEBUG MilestoneTrackerImpl:391 - Milestone ", line):
+            if re.search("VALID", line):
+                inc_class_metric(node_name, "milestoneValid")
+                return ("milestoneValid", 1)
+            return None
+    except:
+        logger.exception("error:")
 
-    if re.search("balance is not consistent", line):
-        if re.search("Validation failed:", line):
-            inc_class_metric(node_name, "inconsistentBalance")
-            return ("inconsistentBalance", 1)
-        return None
+    try:
+        if re.search("[generating solid entry points]: 100.00%", line):#snapshot
+            inc_class_metric(node_name, "snapShot")
+            return ("snapShot", 1)
+    except:
+        logger.exception("error:")
 
-    if re.search("Invalid transaction timestamp", line):
-        inc_class_metric(node_name, "invalidTimestamp")
-        return ("invalidTimestamp", 1)
+    try:
+        if re.search("DNS Checker", line):
+            inc_class_metric(node_name, "dnsCheck")
+            return ("dnsCheck", 1)
+    except:
+        logger.exception("error:")
 
-    if re.search("Sync check = ", line):
-        sync_check = (line.split("Sync check = ")[-1])
-        set_class_metric(node_name, "syncCheck", sync_check)
-        return ("syncCheck", sync_check)
+    try:
+        if re.search("balance is not consistent", line):
+            if re.search("Validation failed:", line):
+                inc_class_metric(node_name, "inconsistentBalance")
+                return ("inconsistentBalance", 1)
+            return None
+    except:
+        logger.exception("error:")
+
+    try:
+        if re.search("Invalid transaction timestamp", line):
+            inc_class_metric(node_name, "invalidTimestamp")
+            return ("invalidTimestamp", 1)
+    except:
+        logger.exception("error:")
+
+    try:
+        if re.search("Sync check = ", line):
+            sync_check = (line.split("Sync check = ")[-1])
+            set_class_metric(node_name, "syncCheck", sync_check)
+            return ("syncCheck", sync_check)
+    except:
+        logger.exception("error:")
 
     return None
 
 
 def inc_class_metric(node_name, metric):
     """metric should be a string in the node's metrics dictionary"""
-    NODE_METRICS[node_name][metric].inc()
+    try:
+        NODE_METRICS[node_name][metric].inc()
+    except:
+        logger.exception("error:")
 
 
 def set_class_metric(node_id, metric, val):
     """metric should be a string in the node's metrics dictionary"""
-    NODE_METRICS[node_id][metric].set(val)
+    try:
+        NODE_METRICS[node_id][metric].set(val)
+    except:
+        logger.exception("error:")
 
 
 def set_rstat_metrics(node_name, line):
-    rstats = parse_rstats(line) # rstats is tuple where idx is val
-    set_class_metric(
-        node_name, 'toProcess', rstats[0]
-    )
-    set_class_metric(
-        node_name, 'toBroadcast', rstats[1]
-    )
-    set_class_metric(
-        node_name, 'toRequest', rstats[2]
-    )
-    set_class_metric(
-        node_name, 'toReply', rstats[3]
-    )
-    set_class_metric(
-        node_name, 'totalTransactions', rstats[4]
-    )
+    try:
+        rstats = parse_rstats(line) # rstats is tuple where idx is val
+    except:
+        logger.exception("error:")
+    try:
+        set_class_metric(
+            node_name, 'toProcess', rstats[0]
+        )
+    except:
+        logger.exception("error:")
+    try:
+        set_class_metric(
+            node_name, 'toBroadcast', rstats[1]
+        )
+    except:
+        logger.exception("error:")
+    try:
+        set_class_metric(
+            node_name, 'toRequest', rstats[2]
+        )
+    except:
+        logger.exception("error:")
+    try:
+        set_class_metric(
+            node_name, 'toReply', rstats[3]
+        )
+    except:
+        logger.exception("error:")
+    try:
+        set_class_metric(
+            node_name, 'totalTransactions', rstats[4]
+        )
+    except:
+        logger.exception("error:")
     return rstats
 
 
 def parse_rstats(line):
-    line = line.split("= ")
-    toProcess = int(line[1].split(' ')[0])
-    toBroadcast = int(line[2].split(' ')[0])
-    toRequest = int(line[3].split(' ')[0])
-    toReply = int(line[4].split(' ')[0])
-    totalTransactions = int(line[5])
+    try:
+        line = line.split("= ")
+        toProcess = int(line[1].split(' ')[0])
+        toBroadcast = int(line[2].split(' ')[0])
+        toRequest = int(line[3].split(' ')[0])
+        toReply = int(line[4].split(' ')[0])
+        totalTransactions = int(line[5])
+    except:
+        logger.exception("error:")
     return (toProcess, toBroadcast, toRequest, toReply, totalTransactions)
 
 
 def match_and_set_node_metric(node_name, line):
-    result = match_api_request(node_name, line)
+    try:
+        result = match_api_request(node_name, line)
+    except:
+        logger.exception("error:")
     if result:
         return result
     else:
-        result = match_x_class(node_name, line)
+        try:
+            result = match_x_class(node_name, line)
+        except:
+            logger.exception("error:")
         if result:
             return result
     return None
@@ -196,26 +289,31 @@ def match_and_set_node_metric(node_name, line):
 
 def export_metrics(exporter_queue, logger):
     while True:
-        line = exporter_queue.get(timeout=10000.0)
-        if line:
-            # we match the start of the line for snake_case node_names
-            node = re.match(NODE_NAME_PATTERN, line)
-
-            if node:
-                node_name = node.group(0)
-                # does nothing if we already are tracking
-                start_tracking_nodes_metrics(node_name)
-
-                result = match_and_set_node_metric(node_name, line)
-                if result:
-                    if result[1] == 1 and not (result[0]=="syncCheck"):
-                        logger.info("Incremented {} for {}".format(
-                            result[0], node_name)
-                        )
-                    else:
-                        logger.info("Set {} for {} to {}".format(
-                            result[0], node_name, result[1])
-                        )
+        try:
+            line = exporter_queue.get(timeout=100.0)
+        except:
+            logger.exception("error:")
+            sys.exit(1)
+        try:
+            if line:
+                # we match the start of the line for snake_case node_names
+                node = re.match(NODE_NAME_PATTERN, line)
+                if node:
+                    node_name = node.group(0)
+                    # does nothing if we already are tracking
+                    start_tracking_nodes_metrics(node_name)
+                    result = match_and_set_node_metric(node_name, line)
+                    if result:
+                        if result[1] == 1 and not (result[0]=="syncCheck"):
+                            logger.info("Incremented {} for {}".format(
+                                result[0], node_name)
+                            )
+                        else:
+                            logger.info("Set {} for {} to {}".format(
+                                result[0], node_name, result[1])
+                            )
+        except:
+            logger.exception("error:")
 
 
 def trail_log(exporter_queue, fname):

@@ -117,7 +117,7 @@ class LineShipper(threading.Thread):
         logger.info("Shipping loglines.")
         while True:
             try:
-                postdata = BROADCAST_QUEUE.get(timeout=60*60)
+                postdata = BROADCAST_QUEUE.get(timeout=60*5)
                 if postdata:
                     self._send_datagram(postdata)
             except Exception as e:
