@@ -103,7 +103,7 @@ def match_api_request(node_name, line):
 def match_x_class(node_name, line):
     try:
         if re.search("Stored_txhash", line):
-            if re.search("API"):
+            if re.search("API", line):
                 inc_class_metric(node_name, "apiStoredTx")
                 return ("apiStoredTx", 1)
             else:
@@ -120,14 +120,14 @@ def match_x_class(node_name, line):
         logger.exception("error:")
 
     try:
-        if re.search("Broadcasted_txhash"):
+        if re.search("Broadcasted_txhash", line):
             inc_class_metric(node_name, "broadcastedTx")
             return ("broadcastedTx", 1)
     except:
         logger.exception("error:")
 
     try:
-        if re.search("Received_txvm"):
+        if re.search("Received_txvm", line):
             inc_class_metric(node_name, "receivedTxvm")
             return ("receivedTxvm", 1)
     except:
