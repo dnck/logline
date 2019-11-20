@@ -5,3 +5,7 @@ Makefile
 *.ipynb
 .ipynb_checkpoints
 /var
+pyvenv.cfg
+/bin
+/lib
+/include

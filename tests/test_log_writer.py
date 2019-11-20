@@ -25,4 +25,4 @@ if __name__ == "__main__":
     while True:
         file_logger.log.info("Hello world again! {}".format(n))
         n += 1
-        time.sleep(0.1)
+        time.sleep(0.5)
