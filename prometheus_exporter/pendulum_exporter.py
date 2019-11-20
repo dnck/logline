@@ -14,11 +14,7 @@ from prometheus_client import start_http_server, Gauge
 
 from context import telegram_notifier
 
-if sys.version_info.major > 2:
-    from queue import Queue
-else:
-    from Queue import Queue
-
+from queue import Queue
 
 NODE_NAME_PATTERN = re.compile(r"^[a-zA-Z0-9._]+")
 
@@ -387,7 +383,7 @@ if __name__ == '__main__':
         '-fname',
         metavar='fname',
         type=str,
-        default='/Users/cook/helix/logline/var/log/helloworld00.log',
+        default='/home/ubuntu/logline/logs/testnet.log',
         help='Log file to scrap'
     )
     PARSER.add_argument(
@@ -395,20 +391,20 @@ if __name__ == '__main__':
         metavar='server_port',
         type=int,
         default=9111,
-        help='Port to push the metrics to. In case multiple exporters running.'
+        help='Port to push the metrics to.'
     )
 
     ARGS = PARSER.parse_args()
 
     NOTIFIER = telegram_notifier.NotificationHandler()
 
-    logger = results_manager.LogManager(level="debug", output="file",
+    LOGGER = results_manager.LogManager(level="debug", output="file",
         filename="pendulum_export_"+str(ARGS.server_port)+".log")
 
     start_http_server(ARGS.server_port)
 
-    TAIL = LogTailer("LogTailer", 1, ARGS.fname, logger)
-    EXPORT = PendulumExporter("PendulumExporter", 2, logger)
+    TAIL = LogTailer("LogTailer", 1, ARGS.fname, LOGGER)
+    EXPORT = PendulumExporter("PendulumExporter", 2, LOGGER)
 
     # Start new Threads
     TAIL.start()
