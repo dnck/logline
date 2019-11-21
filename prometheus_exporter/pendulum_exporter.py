@@ -417,6 +417,6 @@ if __name__ == '__main__':
 
     TAIL.join()
 
-    # NOTIFIER.emit(
-    #     "ALERT! Stopped exporting pendulum metrics from {}".format(ARGS.fname)
-    # )
+    NOTIFIER.emit(
+        "ALERT! Stopped exporting pendulum metrics from {}".format(ARGS.fname)
+    )
