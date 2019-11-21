@@ -61,13 +61,15 @@ class LogTailer(threading.Thread):
         sleep_time = 1.0
         while True:
             line = log_file.readline()
-            if not line and STOP_SIGNAL.empty():
+            if line:
+                line = line.strip()
+                EXPORTER_QUEUE.put("relayer_1 | "+line)
+            elif STOP_SIGNAL.empty():
+                time.sleep(sleep_time)
                 continue
-            else:#logtailer received a stop signal from the exporter.
+            else:
                 self.log.info("Stopped tailing.")
                 sys.exit(1)
-            line = line.strip()
-            EXPORTER_QUEUE.put(line)
 
     def tail(self):
         log_file = open(self.fname, "r")
@@ -343,6 +345,7 @@ class PendulumExporter(threading.Thread):
 
 
     def run(self):
+        time.sleep(5.0)
         while True:
             try:
                 line = EXPORTER_QUEUE.get(timeout=120.0)
@@ -414,6 +417,6 @@ if __name__ == '__main__':
 
     TAIL.join()
 
-    NOTIFIER.emit(
-        "ALERT! Stopped exporting pendulum metrics from {}".format(ARGS.fname)
-    )
+    # NOTIFIER.emit(
+    #     "ALERT! Stopped exporting pendulum metrics from {}".format(ARGS.fname)
+    # )
