@@ -159,7 +159,7 @@ class PendulumExporter(threading.Thread):
                     self.inc_class_metric(node_name, "apiStoredTx")
                     return ("apiStoredTx", 1)
                 else:
-                    inc_class_metric(node_name, "nodeStoredTx")
+                    self.inc_class_metric(node_name, "nodeStoredTx")
                     return ("nodeStoredTx", 1)
         except:
             self.log.exception("error:")
