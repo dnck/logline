@@ -63,7 +63,7 @@ class LogTailer(threading.Thread):
             line = log_file.readline()
             if line:
                 line = line.strip()
-                EXPORTER_QUEUE.put("relayer_1 | "+line)
+                EXPORTER_QUEUE.put(line)
             elif STOP_SIGNAL.empty():
                 time.sleep(sleep_time)
                 continue
